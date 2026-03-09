@@ -107,7 +107,7 @@ We also might look into the acquisition dates of the artwork, since there might 
 
 The MoMA dataset links artists and artworks using ConstituentID, which is what we’ll use to combine those datasets before combining them with the Met dataset. By combining these datasets, we will be able to compare how artists from different geographic origins are represented across two major museum collections and see the patterns of representation over time.
 
-## Timeline
+## Timeline:
 
 ### Week 1 - Initial Review and Data Collection (Sarah)
 - Download datasets from the Metropolitan Museum of Art and MoMa
@@ -143,12 +143,12 @@ The MoMA dataset links artists and artworks using ConstituentID, which is what w
 - Review findings, explanations and limitations
 
 
-## Constraints
+## Constraints:
 
 There could be some possible limitations and challenges with our datasets that may affect our overall project. One challenge could be incomplete data. Some artists have missing nationality and creation dates. This could especially apply to artworks that were created a long time ago, as some historical records may be incomplete. As a result, some entries may need to be excluded from our analysis or require additional data cleaning. Second, there could be differences in dataset structures between the Met and MoMa datasets. The datasets could have different formatting and variable names which could make it difficult for the integration of the two datasets. Another potential limitation could be that there could be inconsistencies in the geographic information. The nationality fields may have different formats, which requires extra attention to detail. For example, “United States”, “US”,”USA”,and ”American” all mean the same geographic location, but need extra standardization. Additionally, the museum collections could only be a representation of the institutional collections rather than representing the global population of artists. Finally, although the datasets are open to the public, there could still be limitations in accuracy, because it solely depends on the museum records that are prone to change over time.
 
 
-## Gaps
+## Gaps:
 
 There are several areas where additional clarification may be required. First, we need to determine the best method for organizing the geographic information. Nationalities need to be categorized into broader regions to make it easier for comparisons. Second, when comparing the process for artists across two museums, there could be a need for validation as artist names alone may not always identify the same person. Third, we may need to handle artists that could possibly have multiple nationalities which could affect geographic analysis. Finally, as we conduct exploratory data analysis, we may need to use additional variables that could improve the quality of our analysis of trends. These gaps will be addressed as we conduct further analysis and refine our approach.
 
