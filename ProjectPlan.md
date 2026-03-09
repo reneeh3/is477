@@ -7,7 +7,7 @@ In order to research this question, we took datasets from major museums, the Met
 The analysis overall will look into whether certain regions are represented more frequently, and whether that’s changed over time. We will be collecting and cleaning the data, combining records from the two museums, doing exploratory data analysis, and creating visualizations for easy analysis of the trends over time. The final results will provide insight into how museums reflect artistic diversity over time.
 
 # Team:
-Our team has two people: Sarah Kim (yewonwk2) and Renee Huang (reneh3). consists of two members: Sarah Kim and Renee Huang. Each member will head different stages of the project while collaborating on all parts of the project.
+Our team has two people: Sarah Kim (yewonwk2) and Renee Huang (reneh3). Each member will head different stages of the project while collaborating on all parts of the project.
 
 Sarah will locate and prepare the datasets for analysis, such as downloading the data, loading the datasets, and conducting basic examination. Sarah will also lead the integration process by identifying shared attributes between datasets and finding the best methods to merge the two datasets.
 
