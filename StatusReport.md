@@ -13,7 +13,7 @@ Another challenge from the MoMA dataset was the inconsistent nationality data. T
 
 Additionally, there were messy date fields. For example, some of the values were like "c. 1950" or ranges like "1945-46." I extracted the first valid four-digit year into a new column and did the same for the date acquired to be consistent.
 
-Overall, these challenges were able to be resolved through targeted cleaning.
+Overall, these challenges were resolved through targeted cleaning.
 
 # Contributions:
 ### Renee:
@@ -21,6 +21,6 @@ For the milestone, I was in charge of preparing and cleaning the MoMA dataset by
 
 Another issue I fixed was the messy date column. I extracted the first year listed and created a new column with it. I did the same with the `dateacquired` column.
 
-Additionally, I standardized the nationalities by grouping them with a nationality map and creating a function to replace things like "UK," "Welsh," etc into just "British or "U.S.," "United States," etc., into just "American." There were more like "Soviet" and "Russia", or East/West Germany, when referring to pre-war countries. For these cases, I simplified it into just the current, modern-day name/country in that location. I understand that causes the dataset to lose some of the nuances of historical countries; however, we want to just look at the broader geographic patterns, so making it more simplified and consistent aligns with our goals, even with the downside of data loss.
+Additionally, I standardized the nationalities by grouping them with a nationality map and creating a function to replace things like "UK," "Welsh," etc into just "British or "U.S.," "United States," etc., into just "American." There were more like "Soviet" and "Russia", or East/West Germany, when referring to pre-war countries. For these cases, I simplified it into just the current, modern-day name/country in that location. I understand that causes the dataset to lose some of the nuances of historical countries; however, we want to just look at the broader geographic patterns, so making it more simplified and consistent aligns with our goals, even with the downside of data loss. There were also input errors. For example, one of the artists was listed as "  Japanese) (Japanese," so cleaning this up to be just "Japanese" was important. 
 
 After merging the datasets, I also removed invalid rows that were missing key artwork identifiers and duplicate rows. Most of the duplicate rows were the `NAN` values with "New York City Transit Authority" as the title mentioned before, so there was no worry of important information being lost. The final result was a cleaned dataset, which is now ready for the next step of analysis.
