@@ -147,6 +147,4 @@ Provide a step-by-step guide to reproduce your results:
 ---
 
 ## References
-- Author, A. A. (Year). *Title*. Source.  
-- Dataset Name. (Year). Source/URL.  
-- Software/Library Name.  
+- 
