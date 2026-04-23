@@ -4,7 +4,8 @@
 
 ## Contributors
 - Renee Huang (reneeh3)  
-- Sarah Kim (yewonwk2)  
+- Sarah Kim (yewonwk2)
+  
 ---
 
 ## Summary
@@ -28,24 +29,80 @@ We used publicly available datasets from both museums, cleaned and standardized 
 ## Data Profile
 *Max 2000 words*  
 
-### Dataset 1: *MoMA: Artist.txt*
+### Dataset 1: *MoMA: Artists.txt*
 - **Location in repository:**  [reneeh3/is477/MoMA datasets/Artists.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection)
-- **Description:** Contains key information about individual artist profiles in the MoMA collections by artwork ID number
+- **Description:** Contains key information about individual artist profiles in the MoMA collections by artist ID number
 - **Structure:**
-- **Content & characteristics:**  
-- **Ethical/legal considerations:**  
-- **Relevance to research questions:**  
+  - Rows: 15,859 individual artists
+  - Columns: 9 variables
+    -   `ConstituentID`: Artist unique identifier
+    -   `DisplayName`: Artist name
+    -   `ArtistBio`: Short artist biography
+    -   `Nationality`: Country of citizenship
+    -   `Gender`
+    -   `BeginDate`: Birth year
+    -   `EndDate`: Death year
+    -   `Wiki QID`: URL for artist "About me's"
+    -   `ULAN`:  Catalog for artists [artist](https://www.getty.edu/research/tools/vocabularies/ulan/index.html)
+  - Primary identifier: `ConstituentID`
+- **Content & characteristics:** This is an artist-level dataset with demographic and biographical attributes like nationality, gender, birth years, and death years. Most variables are categorical and text fields, with `BeginDate` and `EndDate` as numeric year fields. There are 137 unique nationalities and 7 gender values (see later in data cleaning that most of these are syntactic errors). There are many missing values in `ArtistBio` (2,188 missing), `Nationality` (2,500 missing), `Gender` (3,282 missing), `Wiki QID` (12,611 missing), and `ULAN` (12,927 missing)
+- **Ethical/legal considerations:** While this is a large, public museum dataset, it still reflects institutional choices about which artists are documented. Missing demographic information can limit how we can interpret how fully artists are represented. Additionally, the fields may be reflective of what the museum labels the artists and not how the artists actually identify.
+- **Relevance to research questions:** The dataset provides the artists' nationalities and birthdate information needed to analyze geographic origin. It is generally more accurate and/or filled out than the Artwork dataset. It will let us study the background represented in MoMA and to compare it with the MET dataset.
 
+  
 ### Dataset 2: *MoMA: Artworks.txt*
 - **Location in repository:**  [reneeh3/is477/MoMA datasets/Artwork.txt.zip]([https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artist.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip))
-- **Source:**
-- **Description:**  
-- **Structure:**  
-- **Content & characteristics:**  
-- **Ethical/legal considerations:**  
-- **Relevance to research questions:**  
+- **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection)
+- **Structure:**
+  - Rows: 160,632 individual artworks
+  - Columns: 
+  - **Basic artwork info:**
+    - `Title`: Title of artwork  
+    - `Artist`: Name of artist  
+    - `ConstituentID`: Artist identifier (links to Artists dataset)  
 
+  - **Artist-related metadata (duplicated from artist dataset):**
+    - `ArtistBio`: Short description of the artist  
+    - `Nationality`: Artist nationality  
+    - `BeginDate`: Artist birth year  
+    - `EndDate`: Artist death year  
+    - `Gender`: Artist gender  
+
+  - **Artwork-specific metadata:**
+    - `Date`: Year or year range the artwork was created  
+    - `Medium`: Materials used to create 
+    - `Dimensions`: Physical size description  
+    - `Classification`: Type of artwork (e.g., architecture, sculpture)  
+    - `Department`: Museum department  
+
+  - **Museum/catalog information:**
+    - `CreditLine`: Acquisition credit  
+    - `AccessionNumber`: Unique accession number  
+    - `DateAcquired`: Date the museum acquired the artwork  
+    - `Cataloged`: Whether the item is cataloged  
+    - `ObjectID`: Unique artwork identifier  
+
+  - **Links and display info:**
+    - `URL`: Link to artwork page  
+    - `ImageURL`: Link to artwork image  
+    - `OnView`: Whether the artwork is currently on display  
+
+  - **Physical measurement fields (numeric):**
+    - `Circumference (cm)`  
+    - `Depth (cm)`  
+    - `Diameter (cm)`  
+    - `Height (cm)`  
+    - `Length (cm)`  
+    - `Weight (kg)`  
+    - `Width (cm)`  
+    - `Seat Height (cm)`  
+    - `Duration (sec.)`  
+
+  - Primary identifier: `ObjectID`
+- **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications.
+- **Ethical/legal considerations:** Similarly to  Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The Metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum.
+- **Relevance to research questions:** This dataset shows which artists are actually represented in MoMA through their artworks in the collection. Linking artists to the artworks, it helps measure how frequently each geographic origin appears. It also allows for analysis of representation across departments and classifications if interested.
 
 ---
 
