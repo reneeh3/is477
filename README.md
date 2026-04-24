@@ -114,15 +114,15 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
 - **High missingness:**
   - There are **2 variables** with extremely high levels of missing data. However, these were not important to the question we're evaluating.
 
-    - `ULAN` → 12,927 missing (~81.5%)  
-    - `Wiki QID` → 12,611 missing (~79.5%)  
+    - `ULAN`: 12,927 missing (~81.5%)  
+    - `Wiki QID`: 12,611 missing (~79.5%)  
 
 - **Moderate missingness:**
   - Several variables have noticeable but less severe missing data:
 
-    - `Gender` → 3,282 missing (~20.7%)  
-    - `Nationality` → 2,500 missing (~15.8%)  
-    - `ArtistBio` → 2,188 missing (~13.8%)  
+    - `Gender`: 3,282 missing (~20.7%)  
+    - `Nationality`: 2,500 missing (~15.8%)  
+    - `ArtistBio`: 2,188 missing (~13.8%)  
 
 - **No missing values:**
   - The following key variables are fully filled out:
@@ -136,21 +136,21 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
 - **Sparse variables (high missingness):**
   - There are **10 variables** with extremely high levels of missing data. However, these were both not important to the central question or exclusive to digital/physical artworks so they are blank on purpose.
 
-    - `Seat Height (cm)` → 160,632 missing (100%)  
-    - `Circumference (cm)` → 160,622 missing (~99.99%)  
-    - `Weight (kg)` → 160,332 missing (~99.81%)  
-    - `Length (cm)` → 159,898 missing (~99.54%)  
-    - `OnView` → 159,345 missing (~99.20%)  
-    - `Diameter (cm)` → 159,237 missing (~99.13%)  
-    - `Duration (sec.)` → 158,651 missing (~98.77%)  
-    - `Depth (cm)` → 141,944 missing (~88.36%)  
+    - `Seat Height (cm)`: 160,632 missing (100%)  
+    - `Circumference (cm)`: 160,622 missing (~99.99%)  
+    - `Weight (kg)`: 160,332 missing (~99.81%)  
+    - `Length (cm)`: 159,898 missing (~99.54%)  
+    - `OnView`: 159,345 missing (~99.20%)  
+    - `Diameter (cm)`: 159,237 missing (~99.13%)  
+    - `Duration (sec.)`: 158,651 missing (~98.77%)  
+    - `Depth (cm)`: 141,944 missing (~88.36%)  
 
   - The rest of the variables have **moderate missingness**:
-    - `ImageURL` → 67,397 missing (~41.96%)  
-    - `URL` → 58,958 missing (~36.71%)  
-    - `Medium` → 9,162 missing (~5.70%)  
-    - `Dimensions` → 8,739 missing (~5.44%)  
-    - `DateAcquired` → 5,467 missing (~3.40%~) 
+    - `ImageURL`: 67,397 missing (~41.96%)  
+    - `URL`: 58,958 missing (~36.71%)  
+    - `Medium`: 9,162 missing (~5.70%)  
+    - `Dimensions`: 8,739 missing (~5.44%)  
+    - `DateAcquired`: 5,467 missing (~3.40%~) 
 
 ---
 
