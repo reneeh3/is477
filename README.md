@@ -1,4 +1,4 @@
-# Comparative Analysis of Geographic Representation in the MoMA and MET Museums
+# Geographic Representation in the MoMA and MET Museums
 
 ---
 
