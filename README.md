@@ -150,7 +150,7 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
     - `URL`: 58,958 missing (~36.71%)  
     - `Medium`: 9,162 missing (~5.70%)  
     - `Dimensions`: 8,739 missing (~5.44%)  
-    - `DateAcquired`: 5,467 missing (~3.40%~) 
+    - `DateAcquired`: 5,467 missing (~3.40%) 
 
 ---
 
