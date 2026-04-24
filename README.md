@@ -21,8 +21,8 @@ Support questions include:
 
 We used publicly available datasets from both museums, cleaned and standardized key variables, and prepared them to be merged. Some of our preliminary findings from both are:
 - For the MoMA dataset, representation seems to be concentrated in a small number of dominant regions, namely the Americas, followed by Europe.
-**- INSERT MORE**
-**- INSERT ONE MORE?**
+- **INSERT MORE**
+- **INSERT ONE MORE?**
 
 ---
 
