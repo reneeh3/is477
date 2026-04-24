@@ -1,0 +1,6036 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "gender",
+          "expression": "grel:value",
+          "columnName": "gender",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "gender",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Male"
+      }
+    ],
+    "description": "Mass edit cells in column gender"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "gender",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Inkjet print"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Male"
+      }
+    ],
+    "description": "Mass edit cells in column gender"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "()",
+                "l": "()"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "artist",
+          "expression": "grel:value",
+          "columnName": "artist",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "University Community Video, Jim Mulligan, John DeGraaf",
+                "l": "University Community Video, Jim Mulligan, John DeGraaf"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "()",
+                "l": "()"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "artist",
+          "expression": "grel:value",
+          "columnName": "artist",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "New Orleans Video Access Center, Andy Kolker, Louis Alvarez",
+                "l": "New Orleans Video Access Center, Andy Kolker, Louis Alvarez"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "()",
+                "l": "()"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "artist",
+          "expression": "grel:value",
+          "columnName": "artist",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Katherine Ball, Roger Peet, Chelsea Peil",
+                "l": "Katherine Ball, Roger Peet, Chelsea Peil"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "()",
+                "l": "()"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "artist",
+          "expression": "grel:value",
+          "columnName": "artist",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "The Diodes, Amerigo Marras, Bruce Eves",
+                "l": "The Diodes, Amerigo Marras, Bruce Eves"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "()",
+                "l": "()"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "artist",
+          "expression": "grel:value",
+          "columnName": "artist",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Languis, Alejandro Cohen, Marcos Chloca",
+                "l": "Languis, Alejandro Cohen, Marcos Chloca"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentinian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "nationality_clean",
+          "expression": "grel:value",
+          "columnName": "nationality_clean",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "() () () () (Russian",
+                "l": "() () () () (Russian"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () () (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () (American) (American) (American) () (American) () () (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () () (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () (British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () (French) () (French) (British) (French) (Belgian) (Polish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Belgian, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () (Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (American) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (American) (American) (American) (American) () () () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American)",
+          "American) (American) () () () () ()",
+          "American) (American)",
+          "(American",
+          "American) () (American",
+          "American) ()",
+          "American) () () () () () () () (American) () () () ()",
+          "American) () () () () () () () () () () () () () () (American) () () () () ()",
+          "(American) () () () ()",
+          "(American) () () () () () () () () () () () () () (American",
+          "American) () () () () () ()",
+          "American) () () () () () () () () () () () () () (American)",
+          "(American) (American) (American) (American) () () () () () () () () (American) () () ()",
+          "(American) (American",
+          "American) () () () () () () () ()",
+          "American) () () () () () () () (American)",
+          "American) (American) (American)",
+          "(American) () () () () ()",
+          "American) () () () () ()",
+          "American) () () () () () (American)",
+          "American) () () () ()",
+          "American) () () () () () (American",
+          "American) () (American) () () ()",
+          "American) () () (American) ()",
+          "American) (American) () () ()",
+          "American) () ()",
+          "American) (American) (American) (American)",
+          "(American) (American)",
+          "(American) (American) () (American",
+          "(American) (American) (American",
+          "(American) (American) (American) () (American",
+          "(American) (American) (American) (American) (American) (American) (American",
+          "(American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) () (American)",
+          "American) () (American) () (American",
+          "American) (American) (American) ()",
+          "American) (American) (American) (American) ()",
+          "American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) ()",
+          "American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) () (American) (American",
+          "American) () (American) (American) (American",
+          "American) () (American) (American) (American) (American",
+          "American) (American) () (American) (American",
+          "American) (American) (American) () (American) (American",
+          "American) (American) (American) (American) () (American) (American",
+          "American) (American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "German)",
+          "(German",
+          "(German) (German",
+          "German) (German)",
+          "(German)",
+          "(German) () ()",
+          "German) ()",
+          "German) () (German",
+          "(German) (German) (German) (German",
+          "German) (German) (German)",
+          "German) () () (German",
+          "German) (German) (German) (German) (German) ()",
+          "(German) (German) (German",
+          "(German) (German) (German) (German) (German) (German",
+          "German) () (German) (German",
+          "German) () (German) (German) (German) (German) (German",
+          "German) (German) () (German",
+          "German) (German) (German) () (German",
+          "German) (German) (German) (German) (German)",
+          "German) (German) (German) (German) (German) (German)",
+          "German) (German) (German) (German) (German) (German) (German) () (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "American) (American) () (American) (American) () () (American) (American) (American) (American) (American) (American) (American) (American) () (American) (American) (American) () () (American) (American) (German) () () (American",
+          "German) (American)",
+          "German) (American) () ()",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) () (American) (American) (American) (American) (American) (American) (American) (American) (American) (German) (American) (American) (American) (American) (American) (American)",
+          "American) (German) (American) ()",
+          "(American) (American) (German) (American) (American) (American",
+          "American) (American) () (German",
+          "American) (American) (American) (American) (American) (American) (German) (American) (American) (American)",
+          "American) (American) (German)",
+          "American) (German) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "Russian) () () () () (Russian) () () (Russian)",
+          "Russian) (Russian)",
+          "Russian)",
+          "(Russian",
+          "(Russian) () (Russian)",
+          "(Russian) (Russian) (Russian) () ()",
+          "Russian) () () () (Russian) () () () () (Russian) () (Russian",
+          "Russian) ()",
+          "(Russian) () () ()",
+          "(Russian) (Russian)",
+          "(Russian) ()",
+          "Russian) (Russian) (Russian) () ()",
+          "(Russian) (Russian",
+          "(Russian) (Russian) (Russian",
+          "Russian) (Russian) ()",
+          "Russian) (Russian) (Russian) () () (Russian",
+          "Russian) (Russian) (Russian) (Russian) (Russian)",
+          "Russian) (Russian) (Russian) (Russian) (Russian) (Russian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      },
+      {
+        "from": [
+          "(American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (British) (American) (American) (American) (American) (American) (American",
+          "American) () (British) (American) (American) (American",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (British) (American) (American) (American) (American) (American) (British) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "French)",
+          "French) ()",
+          "French) (French)",
+          "(French",
+          "(French) (French) (French",
+          "French) (French) () (French",
+          "(French) (French) (French) (French",
+          "French) (French) (French)",
+          "French) (French) (French) (French)",
+          "French) (French) (French) (French) (French) (French) (French)",
+          "(French) (French",
+          "French) (French) (French) (French) (French) (French)",
+          "French) (French) (French) (French) (French) (French) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Mexican)",
+          "(Mexican"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mexican"
+      },
+      {
+        "from": [
+          "Cambodian",
+          "Cambodian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cambodian"
+      },
+      {
+        "from": [
+          "Thai",
+          "Thai)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thai"
+      },
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (French) (Venezuelan)",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (Venezuelan) (American) (American) (American) (American) (American) (American) (American) (French) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "() (German",
+          "() (German) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "Korean",
+          "(Korean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Korean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Venezuelan) (Spanish) (Brazilian) (British) (Venezuelan) (Mexican) (Colombian) (Mexican) (Venezuelan) (Colombian) (Spanish) (Argentine) (Venezuelan) (Paraguayan) (Colombian) (Venezuelan) (Argentine) (Mexican) (Mexican) (Colombian) (Colombian) (Spanish) (Uruguayan) (Venezuelan) (Colombian) (Japanese) (American) (Mexican) (Mexican)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Venezuelan, Spanish, Brazilian, British, Mexican, Colombian, Argentine, Paraguayan, Uruguayan, Japanese, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Ukrainian) (Ukrainian) (Russian) (Russian) (Russian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ukrainian, Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) () (British",
+          "American) (British)",
+          "American) (British) () (American)",
+          "British) (American)",
+          "(British) (British) (American) (British) (American) (British) (British) (American) (British) (American) (American) (American) (American) (American",
+          "American) (American) (American) (American) (American) (British) (American) (American)",
+          "American) (American) (American) (British) (American) (British) (British) (American) (American) (American) (American)",
+          "American) (American) (British) (American) (American) (American) (American)",
+          "British) (American) (American)",
+          "British) (American) (British) (British)",
+          "British) (British) (British) (British) (British) (British) (British) (British) (British) (British) (American) (British) (British) (British) (British) (British) (British) (British) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British"
+      },
+      {
+        "from": [
+          "French) () (American)",
+          "(American) (American) (American) (French) (American",
+          "(American) (French",
+          "(American) (French) (American) (American",
+          "(French) (French) (French) (French) (American",
+          "American) (American) (American) (American) (American) (American) (American) (American) (French) (American) (American) (American) (American)",
+          "American) (French)",
+          "French) (French) (French) (American)",
+          "French) (French) (French) (French) (French) (French) (French) (French) (French) (American) (French) (French) (French) (French) (French) (French) (French) (French) (French) () (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American"
+      },
+      {
+        "from": [
+          "British)",
+          "British) (British) () () () (British",
+          "(British",
+          "British) (British)",
+          "(British) () (British",
+          "British) ()",
+          "British) () ()",
+          "British) () (British",
+          "British) (British) (British) (British) (British) (British) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "nationality_clean",
+          "expression": "grel:facetCount(value, \"value\", \"nationality_clean\")",
+          "columnName": "nationality_clean",
+          "from": 0,
+          "to": 1000,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (Nationality unknown) (Nationality unknown)",
+          "Nationality unknown) (French) (Nationality unknown) (French)",
+          "French) (French) (French) (Nationality unknown)",
+          "French) (French) (Nationality unknown) (French) (Nationality unknown)",
+          "French) (Nationality unknown) (French) (Nationality unknown)",
+          "Nationality unknown) (French) (French) (French)",
+          "Nationality unknown) (French) (French) (Nationality unknown)",
+          "Nationality unknown) (French) (Nationality unknown) (Nationality unknown)",
+          "Nationality unknown) (Nationality unknown) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "American) (American) (German) (American)",
+          "American) (American) (German) (American) (American) (American)",
+          "American) (German)",
+          "American) (German) () (American) (German",
+          "German) (American) (American)",
+          "German) (American) (American) (American) (American) (German)",
+          "German) (American) (American) (American) (German)",
+          "German) (German) (German) (American) (German) () (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American"
+      },
+      {
+        "from": [
+          "American) () (Japanese",
+          "(American) (Japanese) ()",
+          "(American) (Japanese)",
+          "American) (American) (Japanese) ()",
+          "(American) (Japanese",
+          "(American) (Japanese) (Japanese) (American) (American) (American) (American) (Japanese",
+          "American) () (Japanese) (Japanese) (American) (American) (American) (American) (Japanese",
+          "American) (American) (American) (Japanese) (Japanese) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, American"
+      },
+      {
+        "from": [
+          "(Russian) (Ukrainian) () () () () () () (Russian) () (Russian) () (Russian) () () () () ()",
+          "Ukrainian) (Ukrainian) (Russian) (Russian) () (Russian) (Russian)",
+          "Ukrainian) () (Russian) ()",
+          "Ukrainian) (Ukrainian) () (Russian) (Russian)",
+          "Ukrainian) (Ukrainian) () (Russian) (Russian) (Russian)",
+          "Ukrainian) () (Ukrainian) (Russian) (Russian",
+          "Ukrainian) (Ukrainian) () (Russian) (Russian",
+          "Ukrainian, Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian, Ukrainian"
+      },
+      {
+        "from": [
+          "(Italian) (Italian",
+          "Italian)",
+          "(Italian",
+          "(Italian) (Italian) (Italian) (Italian",
+          "(Italian) (Italian) (Italian) (Italian) (Italian",
+          "Italian) (Italian) (Italian) (Italian) (Italian)",
+          "Italian) (Italian) (Italian) (Italian) (Italian) (Italian) (Italian) (Italian) (Italian) (Italian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      },
+      {
+        "from": [
+          "Japanese)",
+          "(Japanese) (Japanese) (Japanese",
+          "Japanese) () () () () (Japanese)",
+          "Japanese) (Japanese) (Japanese)",
+          "(Japanese) (Japanese",
+          "Japanese) (Japanese) (Japanese) (Japanese) (Japanese) (Japanese) (Japanese) (Japanese) (Japanese) (Japanese)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese"
+      },
+      {
+        "from": [
+          "Canadian)",
+          "Canadian) () (Canadian) (Canadian) () () () ()",
+          "Canadian) ()",
+          "(Canadian) (Canadian",
+          "Canadian) () (Canadian",
+          "Canadian) (Canadian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      },
+      {
+        "from": [
+          "(Dutch) (Dutch) (Dutch",
+          "Dutch)",
+          "Dutch) ()",
+          "(Dutch",
+          "Dutch) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch"
+      },
+      {
+        "from": [
+          "Czech",
+          "Czech) (Czech) (Czech) () (Czech)",
+          "Czech) (Czech) (Czech) (Czech) ()",
+          "(Czech",
+          "Czech)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Czech"
+      },
+      {
+        "from": [
+          "Argentine) (Argentine) (Argentine) () (Argentine) (Argentine",
+          "Argentine)",
+          "(Argentine",
+          "(Argentine) (Argentine",
+          "Argentine) (Argentine) (Argentine) () (Argentine) (Argentine) (Argentine"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentine"
+      },
+      {
+        "from": [
+          "(Spanish",
+          "Spanish)",
+          "Spanish) ()",
+          "(Spanish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      },
+      {
+        "from": [
+          "Colombian",
+          "Colombian) () (Colombian",
+          "Colombian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colombian"
+      },
+      {
+        "from": [
+          "Croatian",
+          "Croatian)",
+          "(Croatian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Croatian"
+      },
+      {
+        "from": [
+          "Georgian",
+          "Georgian) () () (Georgian",
+          "Georgian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgian"
+      },
+      {
+        "from": [
+          "Swiss)",
+          "(Swiss",
+          "Swiss) () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Austrian",
+          "Austrian)",
+          "Austrian) (Austrian)",
+          "(Austrian",
+          "(Austrian)",
+          "(Austrian) (Austrian",
+          "Austrian) (Austrian) (Austrian) (Austrian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian"
+      },
+      {
+        "from": [
+          "Chinese",
+          "(Chinese) (Chinese) (Chinese) (Chinese) (Chinese",
+          "Chinese)",
+          "Chinese) (Chinese)",
+          "(Chinese) (Chinese",
+          "(Chinese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese"
+      },
+      {
+        "from": [
+          "Belgian",
+          "(Belgian",
+          "Belgian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian"
+      },
+      {
+        "from": [
+          "Latvian",
+          "(Latvian",
+          "Latvian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Latvian"
+      },
+      {
+        "from": [
+          "Swedish",
+          "Swedish)",
+          "Swedish) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swedish"
+      },
+      {
+        "from": [
+          "(Scottish) () ()",
+          "Scottish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Scottish"
+      },
+      {
+        "from": [
+          "Chilean",
+          "Chilean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chilean"
+      },
+      {
+        "from": [
+          "Polish",
+          "Polish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      },
+      {
+        "from": [
+          "Ukrainian",
+          "Ukrainian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ukrainian"
+      },
+      {
+        "from": [
+          "Ivorian",
+          "Ivorian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ivorian"
+      },
+      {
+        "from": [
+          "() (Swiss",
+          "() (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      },
+      {
+        "from": [
+          "Finnish",
+          "Finnish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Finnish"
+      },
+      {
+        "from": [
+          "Haitian",
+          "Haitian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Haitian"
+      },
+      {
+        "from": [
+          "New Zealander",
+          "New Zealander)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Zealander"
+      },
+      {
+        "from": [
+          "Nationality unknown",
+          "Nationality unknown)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      },
+      {
+        "from": [
+          "Syrian",
+          "Syrian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Syrian"
+      },
+      {
+        "from": [
+          "Serbian",
+          "Serbian) (Serbian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Serbian"
+      },
+      {
+        "from": [
+          "Egyptian",
+          "Egyptian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Egyptian"
+      },
+      {
+        "from": [
+          "Lebanese",
+          "Lebanese)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lebanese"
+      },
+      {
+        "from": [
+          "Puerto Rican",
+          "Puerto Rican) (Puerto Rican)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Puerto Rican"
+      },
+      {
+        "from": [
+          "Danish",
+          "Danish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Nationality unknown) (Nationality unknown) (Belgian) (French)",
+          "Nationality unknown) (Nationality unknown) (Nationality unknown) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russia"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() () () () () () () () () () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russiam"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (Russian) (Ukrainian) () () () () () () (Russian) () (Russian) () (Russian) () () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian, Ukrainian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (Ukrainian) () () () (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian, Ukrainian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "() (Ukrainian) () () (Ukrainian) () () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ukrainian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (American) (American) (American) (American) (Kenyan) (Mexican) (American) (American) (Indian) (American) (Chinese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) () () () (French) () (Swiss) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (American) (Dutch) (American) (American) (American) (American) (American) (American) (American) (British) (American) (American) (American) (American) (American) (American) (French) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Dutch, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (American) (French) (Dutch) (American) (American) (Japanese) (American) (American) (American) (American) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (American) (French) (Swiss) (American) (Japanese) (American) (French) (American) (American) (Dutch) (American) (American) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Swiss, Japanese, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (American) (French) (Swiss) (South African) (German) (German) (Italian) (Swiss) (German) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Swiss, Japanese, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (Argentine"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Argentine"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (German) (German) (German) (German) (German) (German) (German) (German) (German) (American) (German) (German) (Austrian) (German) (German) (German) (German) (German) (German) (German) (German) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (German) (German) (German) (German) (Hungarian) (German) (German) (Austrian) (German) (German) (German) (German) (German) (German) (German) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Hungarian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (Polish) (Polish) () (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (British) (American) (American) (American) (Lebanese) (Thai) (Danish) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British, Lebanese, Thai, Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (Dutch) (American) (American) (American) (American) (American) (American) (American) (French) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Argentine) (Mexican) (Mexican) (Belgian)",
+          "Mexican) (Mexican) (Belgian) () (Argentine",
+          "Argentine) () (Mexican) (Mexican) (Belgian",
+          "Argentine) (Belgian) () (Mexican) (Mexican",
+          "Argentine) (Mexican) (Belgian) () (Mexican",
+          "Argentine) (Mexican) (Mexican) () (Belgian",
+          "Belgian) (Mexican) (Mexican) () (Argentine",
+          "Mexican) () (Argentine) (Mexican) (Belgian",
+          "Mexican) (Belgian) () (Argentine) (Mexican",
+          "Mexican) (Belgian) (Argentine) (Mexican)",
+          "Mexican) (Mexican) (Belgian) (Argentine)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentine, Mexican, Belgian"
+      },
+      {
+        "from": [
+          "German) (American) (British) ()",
+          "(German) (German) (American) (British) (American",
+          "American) (American) (American) (American) (German) (American) (British) (American) (American) (British) (American)",
+          "American) (German) (British) (American) (American)",
+          "British) (German) (American)",
+          "German) (British) (American) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Canadian) (American) (Canadian",
+          "American) () (Canadian) ()",
+          "(Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (Canadian) (American) (Canadian",
+          "American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (Canadian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian, American"
+      },
+      {
+        "from": [
+          "French) (Swiss) ()",
+          "(French) (Swiss) (French) (Swiss",
+          "Swiss) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Swiss"
+      },
+      {
+        "from": [
+          "American) () (Mexican",
+          "American) (American) (American) (American) (American) (Mexican)",
+          "American) (Mexican)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Mexican"
+      },
+      {
+        "from": [
+          "German) (German) (German) (German) (German) () (German) (German) (German) (Austrian) (German) (German) (German)",
+          "German) () (Austrian",
+          "German) () (German) (German) (German) (German) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (German) (Swiss)",
+          "American) (American) (Swiss) (German) (Swiss)",
+          "German) (American) (American) (Swiss)",
+          "German) (American) (Swiss)",
+          "Swiss) (American) (German) (Swiss)",
+          "Swiss) (German) (American) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Swiss"
+      },
+      {
+        "from": [
+          "Swiss) (American)",
+          "American) (American) (Swiss)",
+          "American) (American) () (American) (Swiss",
+          "American) (American) (Swiss) (American)",
+          "Swiss) (American) (American)",
+          "Swiss) (Swiss) (American) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, American"
+      },
+      {
+        "from": [
+          "American) (Spanish) (French)",
+          "French) (Spanish) (French) (French) (French) (French) (American) (French) (French) (Spanish) (French)",
+          "Spanish) (French) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Spanish, French"
+      },
+      {
+        "from": [
+          "American) (Austrian) (Swiss) ()",
+          "American) (American) (Austrian) (Swiss)",
+          "American) (Swiss) (American) () (Austrian) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Austrian, Swiss"
+      },
+      {
+        "from": [
+          "American, French, Swiss",
+          "Swiss) () (French) (American",
+          "American) (Swiss) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Swiss"
+      },
+      {
+        "from": [
+          "American) () (British) (Mexican",
+          "American) () (British) (Mexican) (Mexican",
+          "American) () (British) (Mexican) (Mexican) (Mexican) (Mexican) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British, Mexican"
+      },
+      {
+        "from": [
+          "(French) (German",
+          "(German) (French",
+          "French) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, German"
+      },
+      {
+        "from": [
+          "French) (Russian)",
+          "Russian) (Russian) (Russian) (French) () (Russian) (Russian) (Russian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) () (French",
+          "British) (British) (French) (British) (British) (British) (British) (British) (British) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, French"
+      },
+      {
+        "from": [
+          "American) (American) (American) (Indian) () (American) (American) (American) (American) (American",
+          "Indian) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indian, American"
+      },
+      {
+        "from": [
+          "(German) (German) (German) (German) (American) (German) (American) (French",
+          "American) (French) (German) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, French, American"
+      },
+      {
+        "from": [
+          "German) (German) () (Czech)",
+          "German) (Czech) (German) (German) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Czech"
+      },
+      {
+        "from": [
+          "American) (American) (American) (American) (French) (American) (American) (American) (American) (American) (British) (American)",
+          "American) (American) (American) (French) (American) (French) (British) (American) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, American"
+      },
+      {
+        "from": [
+          "American) (German) (American) (American) (American) (American) () (American) (American) (American) (American) (Japanese) (American) () (American) (American) (American) (American) (American) (American) (Swiss) (American) (American) (American) (American) () (American",
+          "American) (German) (American) (American) (American) () (American) (American) (American) (American) (Japanese) (American) (American) () (American) (American) (American) (American) (American) (American) (American) (Swiss) (American) (American) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, American, Japanese, Swiss"
+      },
+      {
+        "from": [
+          "Swiss) () (American) (Dutch) (French",
+          "Swiss) () (French) (Dutch) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, American, Dutch, French"
+      },
+      {
+        "from": [
+          "(German) (Romanian) (German) (German",
+          "German) () (Romanian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Romanian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Italian) () () () (American",
+          "American) (American) (American) (Italian)",
+          "Italian) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, American"
+      },
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (Greek) (American) (Swiss) (American) () (Canadian) (American) (American) (American) (South African) (South African) (Taiwanese",
+          "American) (American) (American) (American) (Swiss) () (Canadian) (American) (American) (American) (American) (Taiwanese) (American) (Greek) (American) (South African) (South African",
+          "American) (American) (American) (Swiss) () (Canadian) (American) (American) (American) (American) (Taiwanese) (American) (American) (Greek) (American) (South African) (South African"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Greek, Swiss, , Canadian, South African, Taiwanese"
+      },
+      {
+        "from": [
+          "(Russian) (Georgian) () (Russian) () (Georgian) (Georgian)",
+          "(Georgian) (Russian)",
+          "Georgian) (Russian) () (Russian) (Georgian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian, Georgian"
+      },
+      {
+        "from": [
+          "Ukrainian) (Russian) (Russian) (Russian) (Georgian) (Russian) () (Russian",
+          "Ukrainian) (Russian) (Georgian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ukrainian, Russian, Georgian"
+      },
+      {
+        "from": [
+          "British) (German)",
+          "German) (German) (German) (British) (German) (German) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, German"
+      },
+      {
+        "from": [
+          "American) (American) (Brazilian) (French) () (American",
+          "American) (Brazilian) (French) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Brazilian, French"
+      },
+      {
+        "from": [
+          "(German) (Austrian) (Swiss) () (Austrian) () ()",
+          "(German) (German) (German) (German) (German) (German) (German) (German) (German) (German) (German) (German) (Swiss) (Austrian) (German) (German) (German) (German) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Austrian, Swiss"
+      },
+      {
+        "from": [
+          "American) (American) (Italian) (German) (German) (Swiss)",
+          "American) (Swiss) (American) (Italian) (German) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Italian, German, Swiss"
+      },
+      {
+        "from": [
+          "American, British",
+          "British, American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British"
+      },
+      {
+        "from": [
+          "American) (German) (Thai) (Swiss)",
+          "American) (Swiss) (German) (American) (Thai)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Thai, Swiss"
+      },
+      {
+        "from": [
+          "(Swiss) (Austrian)",
+          "Swiss) (Austrian) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, Austrian"
+      },
+      {
+        "from": [
+          "Danish) (American) (German) (German) (German) (German)",
+          "Danish) (American) (German) (American) (German) (Danish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish, American, German"
+      },
+      {
+        "from": [
+          "American) (American) (American) (British) (Dutch) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (French) (American) (American) (American)",
+          "American) (American) (Dutch) (American) (American) (American) (American) (American) (American) (American) (British) (American) (American) (American) (American) (American) (American) (French) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Dutch, British"
+      },
+      {
+        "from": [
+          "Italian) (American) (Swiss)",
+          "Swiss) (American) (American) (Italian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Swiss, American"
+      },
+      {
+        "from": [
+          "(Austrian) (Israeli",
+          "(Israeli) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian, Israeli"
+      },
+      {
+        "from": [
+          "(Iranian) (Spanish",
+          "Iranian) () (Spanish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iranian, Spanish"
+      },
+      {
+        "from": [
+          "Swiss) (American) (American) (British) ()",
+          "American) (American) (British) (American) (American) (Swiss) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss) (American) (American) (British) ()"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (French) (American) (Cuban) (American) (French) (Spanish) (American) (Austrian) (French) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Cuban, Spanish, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (Mexican) (British) (Polish) (American) (Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Mexican, British, Polish, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(American) (Tlingit) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Tlingit"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Argentine) (Czech) (French) (French) () (French) (British) (British) () (British) (Cuban) (British) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentine, Czech, French, British, Cuban"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Austrian) (Brazilian) (French) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian, Brazilian, French, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Austrian) (Irish) (Swiss) (American) (German) (German) (German) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian, Irish, Swiss, American, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (Chinese) (Israeli) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Chinese, Israeli, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (Chinese) (Israeli) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Egyptian, Indian, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (Egyptian) (Indian) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Egyptian, Indian, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (German) () (British) () (American) () (British) (British) (British) () (Dutch) (British) (British) (British) (Italian) (American) (British) (British) (British) (British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, German, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (German) (American) (Austrian) (Thai) (Austrian) (Swiss) (Thai) (German) () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, German, American, Austrian, Thai, Austrian, Swiss, Thai"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (Swedish) (American) (American) (German) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (British) (American) (British) (Belgian) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (Austrian) (American) (American) (German) (German) (German) (German) (German) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(British) (Swiss) (American) (Chinese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Swiss, American, Chinese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Chinese) (German) (German) (Austrian) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese, German, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Chinese) (Israeli) (Romanian) (British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese, Israeli, Romanian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Colombian) (Argentine) (Brazilian) (Colombian) (Colombian) (Brazilian) (Venezuelan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colombian, Argentine, Brazilian, Venezuelan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Danish) (Argentine) (American) (Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish, Argentine, American, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Danish) (Japanese) (American) (American) (American) (American) (Japanese) (American) (American) (Japanese) (French) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish, Japanese, American, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Danish) (Japanese) (American) (American) (French) (American) (American) () () (American) (American) (Japanese) (Japanese) (American) (Swiss) (French) (American) (American) (Japanese) (French) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish, Japanese, American, French, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Danish) (Japanese) (American) (American) (French) (American) (American) () () (American) (American) (Japanese) (Japanese) (American) (Swiss) (French) (American) (American) (Japanese) (French) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Danish) (Japanese) (American) (Italian) (Nationality unknown) (Dutch) (American) (American) (American) (American) (Czech) (German) (American) (American) (American) (American) (German) (Japanese) (French) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (American) (French) (French) (Italian) (French) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Italian, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (American) (French) (French) (Italian) (French) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Italian, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (British) (French) (Italian) (American) (American) (French) (French) (French) () () (French) (French) () (French) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (British) (French) (Italian) (American) (American) (French) (French) (French) () () (French) (French) () (French) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Italian, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (French) (American) (American) (Japanese) (Italian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Italian, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (French) (French) (British) (British) (French) (French) (Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (French) (Thai"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(French) (German) (Icelandic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, German, Icelandic"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(German) (Danish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(German) (Danish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, Thai, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(German) (German) (American) (American) (American) (Thai) (German) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, Thai"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(German) (German) (German) (German) (German) (Brazilian) (German) (German) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Brazilian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(German) (Mexican) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Mexican, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Indian) (British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Italian) (Spanish) (American) (Italian) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Spanish, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Italian) (Spanish) (American) (Italian) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, American, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Japanese) (American) (American) (American) (American) (American) (American) (Japanese) (French) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Japanese) (American) (Nationality unknown) (American) (American) (American) (Japanese) (Japanese) (Austrian) (American) (American) (Japanese) (French) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Japanese) (German) (American) (Swedish) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, German, Swedish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Malaysian) (Singaporean"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Malaysian, Singaporean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Russian) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "(Vietnamese) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vietnamese, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Albanian) (American) (American) (American) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Albanian, American, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) () (British) (American) (French) (American) (American) (American) (Japanese) (American) (Japanese) (American) (American) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British, French, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) () (Croatian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Croatian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) () (American) (Czech) (American) (Austrian) (British) (French) (American) (Swiss) (Swiss) (Swiss) (French) (German) (German) () (American) () (American) () () (German) () (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Czech, Austrian, British, French, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) () (German) (Polish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (American) (British) (Italian) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, British, Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (American) (Italian) (Russian) (American) (American) () (British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Italian, Russian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (American) (Nationality unknown) (British) (American) (Nationality unknown) (American) (American) () (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Swiss) (Swiss) (Swiss) (Swiss) (Swiss) (Swiss) (Italian) (Swiss) (Swiss) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Swiss) (French) (Nationality unknown) (Nationality unknown) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Swiss) (American) (French) (German) (American) (Australian) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, American, French, German, Australian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Swiss) (American) (American) (British) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss, American, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Spanish) (Mexican) (American) (American) (Spanish) (Spanish) (Spanish) (Argentine) (Spanish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish, Mexican, American, Argentine"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Spirit Lake Dakota/Cheyenne River Lakota"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Spanish) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Swedish) (New Zealander) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swedish, New Zealander"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Slovenian) (Romanian) (Romanian) (Hungarian) (Czech) (Hungarian) (Polish) (Polish) (Czech) (Slovenian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Slovenian, Romanian, Hungarian, Czech, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Serbian) (Serbian) (Serbian) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Serbian, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Polish) (American) (American) () (American) (Polish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Nationality unknown) (French) (German) (Nationality unknown)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Moroccan) (American) (Chinese) (Polish) () (British) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Moroccan, American, Chinese, Polish, British, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Japanese) (Japanese) (American) (American) (American) (French) (American) (Japanese) (American) (French) (American) (French) (French) (American) (American) (Swiss) (Japanese)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, American, French, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Japanese) (French) (Swiss) (French) (French) (French) (French) (French) (Swiss) (French) (French) (French) (Austrian) (French) (French) (French) (French) (French) (French) (French) (Swiss) (French) (French) (French) (Spanish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, French, Swiss, Austrian, Spanish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Japanese) (American) (Nationality unknown) (American) () (Japanese) (American) (American) (American) (Japanese) (Austrian) (American) (American) (American) (American) (German) (Japanese) (French) (American) (American) (American) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese, American, Nationality unknown, Austrian, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Spanish) (American) (French) (German) (Czech) (French) (American) (American) (American) (German) (American) (American) (American) (Danish) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Spanish, American, French, German, Czech, Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Japanese) (American) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Japanese, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Italian) (Italian) (Japanese) (Argentine) (French) (British) (French) (French) (Italian) (Japanese) (Romanian) (Belgian) (Swedish) (Cuban) (Chinese) (Indian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Japanese, French, Argentine, Romanian, Chinese, Cuban, Indian, Swedish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Russian",
+          "Russia",
+          "Russiam"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (British) (American) (American) (American) (American) (American) (American) (American) (Venezuelan)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (American) (Venezuelan)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (British) (American) (American) (Swedish) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (German) (American) (Romanian) (Swiss) (Italian) (French) (American) (American) (French) (Romanian) (French) (French) (Spanish) (American) (Belgian) (Cuban) (American) (Czech) (Brazilian) (American) (Chilean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Romanian, Swiss, Italian, French, Czech, Brazilian, Chilean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Australian) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Belgian) (German) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Belgian, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Dutch) () (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Dutch, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (English) (American) (British) (Mexican) (American) (Belgian) (Mozambican) (American) (Senegalese) () (Senegalese) (Moroccan) (Moroccan) () () (Greek) (American) (Dutch) (American) (British) (British) (British) (American) () (Trinidad and Tobagonian) (American) (American) (British) (American) () (French) (French) (British) (American) (American) (American) (Belgian) (Dutch) (Japanese) (German) (American) (American) (American) (Venezuelan) (American) (American) (American) () (American) (American) (French) (American) () (American) (American) (American) (Swedish) (American) (French) (French) (American) (American) (Dutch) (American) (American) (American) () (Moroccan) (Icelandic) (American) (American) (American) (Nigerian) (American) (American) (Puerto Rican) (American) (Dutch) (French) (French) (German) (British) (British) (Dutch) (French) (Chilean) (South African) (Czech) (British) (American) (American) (American) (British) (Portuguese) (Mozambican) (French) (Mexican) (Italian) (Canadian) (American) (American) (Australian) (American) (American) (American) (Hungarian) (Chilean) (Mexican) (American) (American) (American) (American) (British) (American) (Czech) (Czech) (Czech) (British) (Ethiopian) (American) (Dutch) (Mexican) (American) (American) (American) (American) (American) (American) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Japanese) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Nationality unknown) (American) (Italian) (American) (American) (American) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (Nationality unknown) (French) (Nationality unknown) (American) (Nationality unknown) () (American) (American) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Ukrainian) () (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ukrainian, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Latvian) (Russian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Latvian, Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Italian) (French) (French) (Dutch) (Italian) (Italian) (Swiss) (French) (Japanese) (British) (German) (Belgian) (Japanese) (Danish) (Italian) (Canadian) (American) (Japanese)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, French, Dutch, Swiss, Japanese, British, Danish, Canadian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (French) (French) (German) (Canadian) (Italian) (Belgian) (Italian) (Italian) (Swedish) (Japanese) (French) (Japanese) (French) (British) (Belgian) (Swedish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, French, German, Canadian, Japanese, Swedish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (French) (French) (French) (American) (French) (Swiss) (French) (French) (American) (French) () (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, French, Swiss, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) (Canadian) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Canadian, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Indian) (American) (American) (Czech)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indian, American, Czech"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Icelandic) (American) (Canadian) (American) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Icelandic, American, Canadian, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Greek) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Greek, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Ghanaian) (Swedish) (American) (American) () (Ukrainian) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ghanaian, Swedish, American, Ukrainian, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (British) (American) (Canadian) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, British, American, Canadian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (American) (Swiss) () (British) (Polish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, Swiss, British, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (American) (British) (British) () (Finnish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, British, Finnish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (American) (British) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, American, British, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (American) (Chinese) (Korean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, American, Chinese, Korean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (Brazilian) (German) (American) (Korean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Brazilian, German, American, Korean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (French) (American) (German) (Dutch) (French) (British) (Dutch) (Dutch) (American) (Dutch) (Dutch) (Dutch) (German) (American) (Australian) (American) (American) (Austrian) (Belgian) (American) (Hungarian) (German) (French) (Dutch) (Swiss) (Dutch) (Italian) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, French, American, German, Dutch, Australian, Belgian, Swiss, Hungarian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (Mexican) (Swiss) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Mexican, Swiss, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (Portuguese) (French) (German) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, Portuguese, French, German, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "British) (South African) (German) (American) (Belgian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British, South African, German, American, Belgian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Canadian) (French) (French) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian, French, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Canadian) (Spanish) (French) (French) (Swedish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian, Spanish, French, Swedish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Belgian) (Swiss) (Italian) (Swiss) (Swiss) (French) (Swiss) (French) (French) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian, Swiss, Italian, Swiss, French, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Belgian) (German) (British) (British) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian, German, British, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Belgian) (French) (Nationality unknown) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Belgian) (French) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Austrian) (American) (Polish) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian, American, Polish, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Austrian) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Australian) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Australian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Australian) (American) (German) (British) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Australian, American, German, British, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Swiss) (British) (Swiss) (Romanian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Swiss, British, Romanian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Anmatyerr [Australian]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Australian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Spanish) (Spanish) (French) (Canadian) (British) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Spanish, French, Canadian, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Scottish) (Canadian) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Scottish, Canadian, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (New Zealander) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, New Zealander, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Japanese) (Swiss) (British) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Japanese, Swiss, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Italian) () () (Italian) (Japanese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (German) (American) (American) (American) (American) () (American) (American) (American) (American) (Japanese) (American) (American) () (American) (American) (American) (American) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Serbian) (American) (American) (American) (American) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Serbian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (South African) (Austrian) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, South African, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (Swedish) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Swedish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (German) (German) (Danish) (German) (German) (American) (American) (American) (Austrian) (German) (French) (German) () (German) (German) ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Danish, American, Austrian, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Icelandic) (American) () () () (American) () (American) (French) (French) (American) (American) (Icelandic) (British) (American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Icelandic, American, French, British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "German) (German) () () (Japanese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Icelandic) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Icelandic, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Czech) (German) (American) (American) (American) () ()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Czech, German, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Belgian) (Italian) (Korean)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Belgian, Italian, Korean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Cuban) (French) (American) (British) (German)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Cuban, French, British, German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Dutch) (American) (French) (Japanese)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Dutch, French, Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (Dutch) (Austrian) (Italian) (British) (American) (Swedish) (American) (American) (Danish) (Belgian) (American) (American) (American) (American) (American) (Canadian) (American) (Spanish) (American) (American) (Dutch) (American) (American) (American) (Danish) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, Dutch, Austrian, Italian, British, Swedish, Belgian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (French) (Swiss) (American) (Italian) (Swiss) (Mexican) (Greek) (Spanish) (French) (French) (Italian) (Spanish) (British) (French) (Spanish) (French) (French) (Swiss) (Uruguayan) (French) (French) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, French, Swiss, Italian, Mexican, Greek, British, Uruguayan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "American) (German) (American) (Korean) () (Swedish) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American, German, Korean, Swedish, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Chilean) (Spanish) (American) (Canadian) (Polish) (British) (British) (French) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chilean, Spanish, American, Canadian, Polish, British, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Chinese) (American) () (German) (Georgian) (German) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese, American, German, Georgian, Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Chinese) (American) () (German) (Georgian) (German) (Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese, American, German, Georgian, Austrian\n"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Colombian) (Colombian) (Colombian) (Colombian) (Colombian) (Colombian) (Mexican) (Mexican) (Mexican) (Mexican) (Mexican) (Mexican) (Mexican) (Spanish) (Mexican) (Venezuelan) (Venezuelan) (Venezuelan) (Venezuelan) (Venezuelan) (Venezuelan)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colombian, Mexican, Spanish, Venezuelan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Cuban) () (Belgian) (Dutch) (Italian) (Dutch) (Dutch) (Belgian) (Chilean) (French) (Spanish) (American) (Dutch) (French) (Belgian) (Danish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cuban, Belgian, Dutch, Italian, Chilean, French, Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Danish) (Danish) (Danish) (Icelandic) (British) (Danish) (French) (Dutch) (Danish) (Danish) (French) (Danish) (Belgian) (Dutch) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish, Icelandic, British, French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Dutch) (French) (Nationality unknown) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch, French, Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (American) (Cuban) (British) (Spanish) (Chilean) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American, Cuban, British, Spanish, Chilean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (American) (Spanish) (French) (French) (French) (Swiss) (French) (French) (French) (Spanish) (French) (French) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American, Spanish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Georgian) () (French) (Swiss) (Italian) (French) (French) (Belgian) (French) (French) (French) (French) (French) (French) (French) (Spanish) (French) (French) (French) (Spanish) (German) (French) (Swiss) (German) (French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgian, French, Swiss, Italia, Belgian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "Croatian) () () () (Bosnian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Croatian, Bosnian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (American) (Spanish) (French) (Italian) (Swiss) (French) (French) (Spanish) (French) (Polish) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American, Spanish, Italian, Swiss, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Belgian) (Czech) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Belgian, Czech"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (American) (Russian) (German) (Russian) (French) (Russian) (American) (Israeli) (Belgian) (American) (Italian) (Argentine) (Hungarian) (American) (Belgian) (Italian) (German) (Italian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American, Russian, German, Israeli, Belgian, Italian, Argentine, Hungarian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (British) (Swiss) (French) (French) (Spanish) (German) (French) (French) (French) (Cuban)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, British, Swiss, Spanish, German, Cuban"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Canadian) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Canadian, American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (French) (Belgian) (French) (Dutch) (French) (French) (French) (French) (French) (French) (French) (Algerian) (French) (Swiss)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Belgian, Dutch, Swiss, Algerian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (French) (French) (French) (French) (French) (French) (French) (French) (Polish) (French) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (French) (French) (French) (French) (Nationality unknown) (French) (French) (American) (Irish)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, American, Irish, Nationality unknown"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (French) (French) (German) (French) (French) (Dutch) (Dutch) (Russian) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, German, Dutch, Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (French) (French) (Italian) (French) (French) (Swiss) (French) (French) (French) (French) (French) (Spanish) (Spanish) (French) (Swiss) (German) (French) (French) (Belgian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Swiss, Spanish, German, Belgian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (French) (Spanish) (French) (French) (French) (Polish) (French) (French) (French) (French) (French) (French)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Spanish, Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Irish) (American) (Swiss) (American) (American) (French) (American) (American) (American) (American)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Irish, American, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Italian)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Italian) (Italian) (French) (French) (French) (French) (French) (German) (Czech) (French) (Dutch) (French) (Swiss) (French) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Italian, German, Czech, Dutch, Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value",
+    "edits": [
+      {
+        "from": [
+          "French) (Italian) (Italian) (Japanese) (German) (Polish) (Chilean) (Mexican) (Italian) (Italian) (Italian) (French) (Polish) (Italian) (Austrian) (Mexican) (Argentine) (Austrian) (Russian) (Dutch)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French, Italian, Japanese, German, Polish, Chilean, Mexican, Austrian, Argentine, Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nationality",
+    "description": "Remove column nationality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "gender",
+    "description": "Remove column gender"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "artist_nationality",
+    "description": "Remove column artist_nationality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "artist_gender",
+    "description": "Remove column artist_gender"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "artistbio",
+    "description": "Remove column artistbio"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "date",
+    "description": "Remove column date"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "medium",
+    "description": "Remove column medium"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "dimensions",
+    "description": "Remove column dimensions"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "creditline",
+    "description": "Remove column creditline"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "accessionnumber",
+    "description": "Remove column accessionnumber"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "onview",
+    "description": "Remove column onview"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "circumference_(cm)",
+    "description": "Remove column circumference_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "depth_(cm)",
+    "description": "Remove column depth_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "diameter_(cm)",
+    "description": "Remove column diameter_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "height_(cm)",
+    "description": "Remove column height_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "length_(cm)",
+    "description": "Remove column length_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "weight_(kg)",
+    "description": "Remove column weight_(kg)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "width_(cm)",
+    "description": "Remove column width_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "seat_height_(cm)",
+    "description": "Remove column seat_height_(cm)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "duration_(sec.)",
+    "description": "Remove column duration_(sec.)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "year_created",
+    "description": "Remove column year_created"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "artist",
+    "description": "Remove column artist"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "begindate",
+    "description": "Remove column begindate"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "enddate",
+    "description": "Remove column enddate"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "classification",
+    "description": "Remove column classification"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "department",
+    "description": "Remove column department"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "dateacquired",
+    "description": "Remove column dateacquired"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cataloged",
+    "description": "Remove column cataloged"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "objectid",
+    "description": "Remove column objectid"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "url",
+    "description": "Remove column url"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "imageurl",
+    "description": "Remove column imageurl"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "year_acquired",
+    "description": "Remove column year_acquired"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "constituentid",
+    "description": "Remove column constituentid"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "constituentid_list",
+    "description": "Remove column constituentid_list"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "gender_clean",
+    "description": "Remove column gender_clean"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "artist_constituentid",
+    "description": "Remove column artist_constituentid"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "nationality_clean",
+    "keyColumnName": "title",
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "description": "Split multi-valued cells in column nationality_clean"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column nationality_clean using expression grel:value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American) () (German) (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American,German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American) (American) (American) (American) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American,British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "South African) (British)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "South African,British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Trinidad and Tobagonian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Trinidad,Tobagonian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "()"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "nationality_clean",
+    "keyColumnName": "title",
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "description": "Split multi-valued cells in column nationality_clean"
+  }
+]
