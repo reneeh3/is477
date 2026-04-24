@@ -20,9 +20,9 @@ Support questions include:
 * How has representation changed over time (with the measure being the artists' birthdays)?
 
 We used publicly available datasets from both museums, cleaned and standardized key variables, and prepared them to be merged. Some of our preliminary findings from both are:
-* For the MoMA dataset, representation seems to be concentrated in a small number of dominant regions, namely the Americas, followed by Europe.
-* INSERT MORE
-* INSERT ONE MORE?
+- For the MoMA dataset, representation seems to be concentrated in a small number of dominant regions, namely the Americas, followed by Europe.
+**- INSERT MORE**
+**- INSERT ONE MORE?**
 
 ---
 
@@ -200,13 +200,35 @@ Describe the main challenges encountered during the project.
 ---
 
 ## Reproducing
+
 Provide a step-by-step guide to reproduce your results:
 
-1.  
-2.  
-3.  
-4.  
+1. Clone the project repository and navigate into it:
+   ```bash
+   git clone <your-repo-link>
+   cd is477
+   ```
+2.  Install required dependencies
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+3.  Run the MoMA workflow using Snakemake:
+   ```bash
+snakemake --cores 1
+   ```
+This will automatically download the MoMA datasets from the official MoMA GitHub repository, run the cleaning script ( `clean_moma.py`), and generate a cleaned dataset  (`moma_snakefile_cleaned.csv`).
 
+4.  Open the cleaned dataset in OpenRefine.
+   - Load `moma_snakefile_cleaned.csv`
+   - Apply the saved history file:
+     - `apply_openrefine.json`
+5. Export the final cleaned MoMA dataset from OpenRefine as `final_moma.csv`.
+**6. COMPLETE THE MET CLEANING STEPS**
+-
+-
+-
+
+7. Run analysis **(`INSERT THE ANALYSIS FILE NAME`)** to generate results.
 ---
 
 ## References
