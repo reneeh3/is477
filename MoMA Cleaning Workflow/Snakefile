@@ -1,0 +1,9 @@
+rule all:
+    input:
+        "results/moma_snakefile_cleaned.csv"
+
+rule clean_moma:
+    output:
+        "results/moma_snakefile_cleaned.csv"
+    script:
+        "scripts/clean_moma.py"
