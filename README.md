@@ -31,9 +31,10 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
 ### Dataset 1: *MoMA: Artists.txt*
 - **Location in repository:**  [reneeh3/is477/MoMA datasets/Artists.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
-- **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset accessed April 1st](https://media.githubusercontent.com/media/MuseumofModernArt/collection/43399bad2fad626a0750ab6801ced6f1e83b0a41/Artists.csv)
-- **Description:** Contains key information about individual artist profiles in the MoMA collections by artist ID number
+- **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/43399bad2fad626a0750ab6801ced6f1e83b0a41/Artists.csv)
+- **Description:** Contains key information about individual artist profiles in the MoMA collections by artist ID number. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artists. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
+  - Format: CSV (UTF-8 encoded)
   - Rows: 15,859 individual artists
   - Columns: 9 variables
     -   `ConstituentID`: Artist unique identifier
@@ -53,7 +54,8 @@ We used publicly available datasets from both museums, cleaned and standardized 
   
 ### Dataset 2: *MoMA: Artworks.txt*
 - **Location in repository:**  [reneeh3/is477/MoMA datasets/Artwork.txt.zip]([https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artist.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip))
-- **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv) 
+- **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
+- **Description**: This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
   - Rows: 160,632 individual artworks
   - Columns: 
@@ -100,9 +102,16 @@ We used publicly available datasets from both museums, cleaned and standardized 
     - `Duration (sec.)`  
 
   - Primary identifier: `ObjectID`
-- **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications.
-- **Ethical/legal considerations:** Similarly to  Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The Metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum.
+- **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications. While MoMA’s full collection contains nearly 200,000 works, this dataset includes only those that have been digitized/cataloged, so some artists, regions, or time periods may be underrepresented.
+- **Ethical/legal considerations:** Similarly to  Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The Metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum. The dataset is provided “as is” for research purposes. Some records are incomplete, inconsistent, or not curatorially verified, which may affect accuracy. Therefore, results derived from this dataset should be interpreted cautiously and not treated as definitive measures of representation.
 - **Relevance to research questions:** This dataset shows which artists are actually represented in MoMA through their artworks in the collection. Linking artists to the artworks, it helps measure how frequently each geographic origin appears. It also allows for analysis of representation across departments and classifications if interested.
+
+The museum periodically updates both MoMA datasets. This project uses a snapshot of the data accessed on April 1, 2026, and results may differ if the dataset is updated in the future. They are also both released under a CC0 public domain license, allowing unrestricted use. However, MoMA requests proper attribution, and any modifications to the dataset should be clearly indicated.
+
+### Dataset 3: MET
+- 
+- 
+- 
 
 ---
 
@@ -133,7 +142,7 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
     - `EndDate`  
 
 **MoMA Artworks.txt**
-- **Sparse variables (high missingness):**
+- **High missingness:**
   - There are **10 variables** with extremely high levels of missing data. However, these were both not important to the central question or exclusive to digital/physical artworks so they are blank on purpose.
 
     - `Seat Height (cm)`: 160,632 missing (100%)  
@@ -159,11 +168,11 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
 
 ### MoMA Datasets
 
-For the MoMA Artists and Artworks dataset, the data was first initially cleaned and merged through Python. Then, using OpenRefine, the data was manually standardized for consistency. 
+For the MoMA Artists and Artworks dataset, the data was initially cleaned and merged through Python. Then, using OpenRefine, the data was manually standardized for consistency. Key transformations include standardizing nationality and gender fields, splitting multi-artist records, and creating new variables such as `nationality_clean`. As a result, the final dataset differs from the original source and should be interpreted as a derived dataset. 
 
 #### Python Cleaning
 
-For Python, I started by normalizing column names in  `Artists.txt` and `Artworks.txt`. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores, which addresses consistency issues. The text fields were trimmed and numerical columns like `constituentid`, `begindate`, and `enddate` were converted to numeric values. Fields with `0` values in date columns were replaced with missing values because `0` was being used as a placeholder rather than a real year. This addressed accuracy and missing-value issues.
+For Python, I started by normalizing column names in  `Artists.txt` and `Artworks.txt`. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores, which addresses consistency issues. The text fields were trimmed, and numerical columns like `constituentid`, `begindate`, and `enddate` were converted to numeric values. Fields with `0` values in date columns were replaced with missing values because `0` was being used as a placeholder rather than a real year. This addressed accuracy and missing-value issues.
 
 I also created functions that standardize nationality, gender, and dates. The nationality function removed extra parentheses and formatting, and used a mapping dictionary to combine the same values that were written differently, such as `USA` or `US.` I did the same with gender, in case that was something extra we wanted to analyze. For the year function, it pulled the first valid four-digit year from the strings to standardize strings like `c. 1950` or `1945-46`.
 
@@ -223,6 +232,7 @@ This will automatically download the MoMA datasets from the official MoMA GitHub
    - Apply the saved history file:
      - `apply_openrefine.json`
 5. Export the final cleaned MoMA dataset from OpenRefine as `final_moma.csv`.
+
 **6. COMPLETE THE MET CLEANING STEPS**
 -
 -
