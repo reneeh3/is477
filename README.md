@@ -234,9 +234,6 @@ This will automatically download the MoMA datasets from the official MoMA GitHub
 5. Export the final cleaned MoMA dataset from OpenRefine as `final_moma.csv`.
 
 **6. COMPLETE THE MET CLEANING STEPS**
--
--
--
 
 7. Run analysis **(`INSERT THE ANALYSIS FILE NAME`)** to generate results.
 ---
