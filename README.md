@@ -205,6 +205,26 @@ I imported the post-Python cleaned MoMA dataset into OpenRefine for additional c
 
 The unnecessary columns I removed included mostly physical measurement columns, image/link fields, and old/unclean nationality columns to reduce clutter and keep the final dataset focused on the variables for geographic representation. For multi-nationality values, I used OpenRefine’s multi-valued cell split function to separate values by commas, then trimmed whitespace. This made the nationality field more consistent.
 
+### Met Dataset
+
+For the MET dataset, the data was initially cleaned and transformed using Python, followed by additional standardization in OpenRefine. Since the MET dataset stores both artwork and artist information in a single file, preprocessing was required to extract and standardize relevant variables. Key transformations included cleaning nationality values, extracting year fields, standardizing column names, and reducing the dataset to variables relevant to the research question. As a result, the final dataset differs from the original source and should be interpreted as a derived dataset.
+
+### Python Cleaning  
+For Python, I started by normalizing column names in the MET dataset. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores to ensure consistency across variables. Text fields were trimmed to remove leading and trailing whitespace, and relevant columns such as artist birth and death dates were processed to extract usable numeric values. Since many of the date fields in the MET dataset were stored as text, I created a function to extract the first valid four-digit year from each entry, allowing for standardized numerical analysis.
+
+I also created a function to clean and standardize nationality values. This function removed unnecessary formatting such as parentheses and extra characters, and used a mapping dictionary to group equivalent values together (e.g., “USA,” “US,” and “United States” were all standardized to “American”). This step was important because the MET dataset contained inconsistent and messy nationality entries that would otherwise distort the analysis.
+
+Unlike the MoMA dataset, the MET dataset did not require merging separate artist and artwork tables, since both types of information were already combined. However, this also meant that artist information was repeated across multiple artwork records. To address this, I focused on selecting only the relevant columns for the analysis and reducing the dataset size by filtering out unnecessary variables. I then created a final dataset that included only key variables such as title, artist name, artist birth year, artist death year, and cleaned nationality.
+
+Finally, I removed invalid rows with missing critical values such as artist name, birth year, or nationality, and removed duplicate rows to ensure that each record was unique and meaningful for analysis. This helped improve data quality and ensured consistency with the MoMA dataset structure.
+
+### OpenRefine Cleaning  
+After completing the initial cleaning in Python, I imported the MET dataset into OpenRefine for further standardization. OpenRefine was primarily used to inspect and correct inconsistencies in the nationality field, which remained one of the most complex variables. Using text faceting and clustering, I identified variations of the same nationality (e.g., “American|”, duplicate entries, or minor spelling inconsistencies) and standardized them into consistent values.
+
+I also used OpenRefine’s multi-valued cell functions to handle cases where nationality values contained multiple entries separated by delimiters. These values were split into separate entries and cleaned to remove duplicates and extra whitespace, ensuring that each nationality was clearly represented. Additional transformations included trimming whitespace, renaming columns for clarity, and removing any remaining unnecessary or redundant columns that were not relevant to the research question.
+
+Overall, OpenRefine complemented the Python cleaning process by enabling efficient manual inspection and correction of data inconsistencies that were difficult to fully automate. The final dataset produced from this combined workflow is more consistent, structured, and suitable for analyzing geographic representation in the MET collection.
+
 ---
 
 ## Findings
