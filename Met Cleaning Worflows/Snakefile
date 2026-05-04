@@ -1,0 +1,13 @@
+rule all:
+    input:
+        "results/moma_snakefile_cleaned.csv",
+        "results/met_snakefile_cleaned.csv"
+
+rule clean_met:
+    input:
+        artists="data/artists.txt",
+        artworks="data/artworks.txt"
+    output:
+        "results/met_snakefile_cleaned.csv"
+    script:
+        "scripts/clean_met.py"
