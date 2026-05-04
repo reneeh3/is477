@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 
-ARTISTS_FILE = "data/artists.txt"
-ARTWORKS_FILE = "data/artworks.txt"
+MET_URL = "https://media.githubusercontent.com/media/metmuseum/openaccess/master/MetObjects.csv"
 
 NATIONALITY_MAP = {
     "American": "American", "United States": "American", "USA": "American", "US": "American",
