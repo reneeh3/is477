@@ -191,17 +191,11 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
     - `Object Number`: accession number  
     - `Title`: artwork title  
 
-### Consistency and accuracy issues:
-
-In addition to missing values, the MET dataset presented several consistency challenges. Nationality values were particularly inconsistent, with variations such as “USA,” “US,” “United States,” and entries containing extra characters or delimiters. These inconsistencies required standardization through both Python (using mapping dictionaries) and OpenRefine (using clustering and manual correction). Date fields also varied in format, often appearing as strings with prefixes (e.g., “c.”) or ranges (e.g., “1945–46”), which required extraction of standardized numeric values.
-
-Another important issue was the repetition of artist information across multiple artwork records. Because the dataset is structured at the artwork level, the same artist may appear many times, which can influence counts of representation if not interpreted carefully. While this does not represent a data error, it is an important characteristic that affects how the dataset is analyzed.
-
 ### Overall assessment:
 
-Overall, the MET dataset is rich in information but requires significant preprocessing to be suitable for analysis. While missing values and inconsistencies are present, most critical variables needed for the research question—such as artist name, nationality, and birth year—can be cleaned and standardized effectively. By filtering incomplete records, standardizing key fields, and reducing the dataset to relevant variables, we were able to produce a high-quality derived dataset suitable for analyzing geographic representation.
+Overall, the MoMA and MET datasets are rich in information but require significant preprocessing to be suitable for analysis. While missing values and inconsistencies are present in both datasets, most critical variables needed for the research question—such as artist name, nationality, and birth year—can be cleaned and standardized effectively. By filtering incomplete records, standardizing key fields, and reducing the datasets to relevant variables, we were able to produce high-quality derived datasets suitable for analyzing geographic representation.
 
-Despite these improvements, it is important to recognize that the dataset reflects institutional biases in collection and cataloging. As such, the results of the analysis should be interpreted as insights into museum representation rather than definitive measures of global artistic diversity.
+Despite these improvements, it is important to recognize that both datasets reflect institutional biases in collection and cataloging. As such, the results of the analysis should be interpreted as insights into museum representation rather than definitive measures of global artistic diversity.
 
 ---
 
