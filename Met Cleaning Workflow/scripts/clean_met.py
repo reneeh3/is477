@@ -1,20 +1,12 @@
-# =========================
 # IMPORT LIBRARIES
-# =========================
 import pandas as pd
 import numpy as np
 import re
 
-
-# =========================
 # FILE PATH
-# =========================
 MET_FILE = "data/MetObjects_small.csv"
 
-
-# =========================
 # NATIONALITY MAPPING
-# =========================
 NATIONALITY_MAP = {
     "American": "American", "United States": "American", "USA": "American", "US": "American",
     "British": "British", "English": "British", "Scottish": "British", "Welsh": "British", "UK": "British",
@@ -27,10 +19,7 @@ NATIONALITY_MAP = {
     "Canadian": "Canadian",
 }
 
-
-# =========================
 # CLEANING FUNCTIONS
-# =========================
 def clean_nationality(val):
     if pd.isna(val):
         return np.nan
@@ -47,9 +36,7 @@ def extract_year(val):
     return int(match.group()) if match else np.nan
 
 
-# =========================
 # MAIN CLEANING PIPELINE
-# =========================
 def main():
 
     # Load dataset
