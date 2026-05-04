@@ -30,7 +30,7 @@ We used publicly available datasets from both museums, cleaned and standardized 
 *Max 2000 words*  
 
 ### Dataset 1: *MoMA: Artists.txt*
-- **Location in repository:**  [reneeh3/is477/MoMA datasets/Artists.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
+- **Location in repository:** [MoMA:Artists.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/43399bad2fad626a0750ab6801ced6f1e83b0a41/Artists.csv)
 - **Description:** Contains key information about individual artist profiles in the MoMA collections by artist ID number. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artists. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
@@ -53,7 +53,7 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
   
 ### Dataset 2: *MoMA: Artworks.txt*
-- **Location in repository:**  [reneeh3/is477/MoMA datasets/Artwork.txt.zip]([https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artist.txt.zip](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip))
+- **Location in repository:**  [MoMA: Artworks.txt]((https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip))
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
 - **Description**: This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
