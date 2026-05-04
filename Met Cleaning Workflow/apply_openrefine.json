@@ -1,0 +1,2198 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column nationality_clean using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French",
+          "French?",
+          "French (?)",
+          "French(?",
+          "French (?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "German",
+          "German?",
+          "GErman",
+          "German (?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "Flemish",
+          "Flemish (?",
+          "Flemish (?)",
+          "Flemish?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Flemish"
+      },
+      {
+        "from": [
+          "Italian",
+          "Italian (?",
+          "Italian?",
+          "Italian (?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      },
+      {
+        "from": [
+          "Netherlandish",
+          "Netherlandish?",
+          "Netherlandish (?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlandish"
+      },
+      {
+        "from": [
+          "American",
+          "American?",
+          "AMerican"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "British",
+          "British?",
+          "BRitish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      },
+      {
+        "from": [
+          "Flemish (born Germany",
+          "Flemish (born Germany)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Flemish"
+      },
+      {
+        "from": [
+          "Belgian",
+          "Belgian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian"
+      },
+      {
+        "from": [
+          "Dutch",
+          "Dutch?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch"
+      },
+      {
+        "from": [
+          "German American",
+          "American German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "French (active Britain",
+          "French (active Britain)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "American (born Ireland",
+          "American (born Ireland)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American "
+      },
+      {
+        "from": [
+          "Italian or French",
+          "French or Italian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "French and American",
+          "American and French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Polish",
+          "Polish (?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      },
+      {
+        "from": [
+          "German and American",
+          "American and German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "Brazilian",
+          "Brazilian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brazilian"
+      },
+      {
+        "from": [
+          "Argentinian",
+          "Argentinian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentinian"
+      },
+      {
+        "from": [
+          "British and American",
+          "American and British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "Spanish",
+          "Spanish?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      },
+      {
+        "from": [
+          "Canadian",
+          "Canadian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      },
+      {
+        "from": [
+          "American (born Germany",
+          "American (born Germany)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "Russian",
+          "Russian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      },
+      {
+        "from": [
+          "Swiss",
+          "Swiss?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      },
+      {
+        "from": [
+          "French Italian",
+          "Italian French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      },
+      {
+        "from": [
+          "German (Augsburg)",
+          "German (Augsburg"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "American (born Dominican Republic)",
+          "American (born Dominican Republic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "French or Dutch",
+          "Dutch or French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Irish",
+          "Irish?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Irish"
+      },
+      {
+        "from": [
+          "Puerto Rican",
+          "Puerto Rican?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Puerto Rican"
+      },
+      {
+        "from": [
+          "Mexican",
+          "Mexican?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mexican"
+      },
+      {
+        "from": [
+          "Austrian or German",
+          "German or Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian"
+      },
+      {
+        "from": [
+          "Swedish",
+          "Swedish?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swedish"
+      },
+      {
+        "from": [
+          "Italian (born Spain)",
+          "Italian (born Spain"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian "
+      },
+      {
+        "from": [
+          "Austrian",
+          "Austrian?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian"
+      },
+      {
+        "from": [
+          "British or American",
+          "American or British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British "
+      },
+      {
+        "from": [
+          "British (born France",
+          "British (born France)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American",
+          "American "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "British",
+          "British "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      },
+      {
+        "from": [
+          "Italian",
+          "Italian "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French/Dutch",
+          "French Dutch"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch"
+      },
+      {
+        "from": [
+          "Austrian German",
+          "Austrian-German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "Mexican American",
+          "Mexican-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "British",
+          "Britsh",
+          "Brtiish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      },
+      {
+        "from": [
+          "Finnish",
+          "Finish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Finnish"
+      },
+      {
+        "from": [
+          "Spanish",
+          "Spainish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      },
+      {
+        "from": [
+          "German",
+          "Germany"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "Romanian",
+          "Rumanian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Romanian"
+      },
+      {
+        "from": [
+          "Ghanaian",
+          "Kenyan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ghanaian"
+      },
+      {
+        "from": [
+          "South Netherlandish (Duchy of Brabant",
+          "South Netherlandish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlandish"
+      },
+      {
+        "from": [
+          "French",
+          "French 1866–1932"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Bohemian",
+          "Bahamian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bohemian"
+      },
+      {
+        "from": [
+          "India",
+          "Inuit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Finnish",
+          "Venice"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Finnish"
+      },
+      {
+        "from": [
+          "France",
+          "Veronese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "France"
+      },
+      {
+        "from": [
+          "Belgian",
+          "Belgium"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Belgian"
+      },
+      {
+        "from": [
+          "Persian",
+          "Prussian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Persian"
+      },
+      {
+        "from": [
+          "Geman",
+          "Ghanaian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Geman"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French and British",
+          "French and English",
+          "Franco-Netherlandish",
+          "French and Canadian",
+          "born Canada"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "American and Canadian",
+          "American Indian",
+          "American and Mexican"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      },
+      {
+        "from": [
+          "French British",
+          "French (born Algeria",
+          "French (born Germany)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Australian",
+          "Australian (Aboriginal",
+          "Australian-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Australian"
+      },
+      {
+        "from": [
+          "German British",
+          "German (born Westheim",
+          "German (born Bohemia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "Hopi",
+          "Gubbio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hopi"
+      },
+      {
+        "from": [
+          "Canadian (Inuit)",
+          "Continental/Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      },
+      {
+        "from": [
+          "French",
+          "France"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "Swiss French",
+          "Swiss (born England)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      },
+      {
+        "from": [
+          "German (Stuttgart",
+          "German (active Italy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      },
+      {
+        "from": [
+          "First Nations",
+          "First Nation"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "First Nations"
+      },
+      {
+        "from": [
+          "Polish",
+          "Welsh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      },
+      {
+        "from": [
+          "Japanese",
+          "Javanese"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese"
+      },
+      {
+        "from": [
+          "Spanish (Andalusian",
+          "Spanish (Madrid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      },
+      {
+        "from": [
+          "Chinese",
+          "Seneca"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese"
+      },
+      {
+        "from": [
+          "Netherlandish",
+          "Netherlandish or German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlandish"
+      },
+      {
+        "from": [
+          "Argentine",
+          "Argentinian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Argentinian"
+      },
+      {
+        "from": [
+          "Austrian",
+          "Ecuadorian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian"
+      },
+      {
+        "from": [
+          "Mohawk",
+          "Mokawk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mohawk"
+      },
+      {
+        "from": [
+          "Canadian/British",
+          "Canadian-Brazilian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American or German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American-Canadian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American-Palestinian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ancient Greek"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Greek"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Austrian and American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austrian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "British American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British "
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "British-Nigerian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "British "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Canada"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canadian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chinese-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Chinese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Chiricahua Apache Native American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Native American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Colombia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colombian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Denmark"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Danish-German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Danish-Icelandic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Danish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dutch - North American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dutch German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dutch"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ethiopian American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French Flemish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French or German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "French Swedish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "German (b. Switzerland"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Uruguayan-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Uruguayan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Turkish-Bulgarian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Turkish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Swiss or Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Spanish/Mexican"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Spanish or Mexican"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Spanish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Soviet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Scottish or British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Scottish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Scottish or American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Scottish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Savoyard-French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Russian Ukranian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Russian (born Finland"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Russian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Roman-British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "probably Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Swiss"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "possibly Iranian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iranian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "possibly French"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "French"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Polish Lithunanian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Polish or German?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Polish-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Polish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "German/Swiss"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hanoverian (German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "German"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hungarian or Austrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hungarian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hunkpapa Lakota/ Teton Sioux"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hunkpapa Lakota"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Iranian-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iranian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Iranian-British"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iranian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Iranian-Assyrian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iranian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Irish-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Irish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Italian (active Ancona)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Italian (Naples"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Italian or Spanish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Japanese (Arita"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Japanese and German"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Japanese-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Japanese"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Kenyan-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kenyan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lebanese-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "London"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "British"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mexican (born Spain"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mexican"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mexico"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mexican"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Miwok and Southern Miwok"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Miwok"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Minneconjou Lakota/Teton Sioux"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Minneconjou Lakota"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "North African (?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "North African"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "North Netherlandish"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlandish"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "North American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "American"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Og La La Lakota/ Teton Sioux"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Teton Sioux"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pakistani-American"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pakistan"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "South Korean"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Korean"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Southern Italy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Italian"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "nationality_clean",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Southern Netherlands"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlands"
+      }
+    ],
+    "description": "Mass edit cells in column nationality_clean"
+  }
+]
