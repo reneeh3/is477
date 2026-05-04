@@ -134,7 +134,7 @@ The museum periodically updates both MoMA datasets. This project uses a snapshot
 
 ## Data Quality
 *(500–1000 words)*  
-To assess data quality, we examined completeness, consistency, and accuracy across key variables. A primary focus was on identifying missing values, as these directly impact our ability to analyze artist representation. For MoMA, there were many incomplete and inconsistent variables. Generally, the percentage for the important variables required for analysis was not very concerning, and the higher missingness variables are only apparent in less critical information such as size or web links to the works.
+To assess data quality, we examined completeness, consistency, and accuracy across key variables. A primary focus was on identifying missing values, as these directly impact our ability to analyze artist representation. For MoMA, there were many incomplete and inconsistent variables. Generally, the percentage for the important variables required for analysis was not very concerning, and the higher missingness variables are only apparent in less critical information such as size or web links to the works. For the MET dataset, data quality challenges were primarily related to inconsistencies in formatting, the presence of missing values in artist-related fields, and the structure of the dataset itself. 
 
 **MoMA Artists.txt:**
 - **High missingness:**
@@ -176,7 +176,43 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
     - `URL`: 58,958 missing (~36.71%)  
     - `Medium`: 9,162 missing (~5.70%)  
     - `Dimensions`: 8,739 missing (~5.44%)  
-    - `DateAcquired`: 5,467 missing (~3.40%) 
+    - `DateAcquired`: 5,467 missing (~3.40%)
+   
+**MET: MetObjects.csv**
+- **High missingness:**
+  - There are several variables with extremely high levels of missing data. However, these variables are not central to the research question or are dependent on the type of artwork, so missing values are expected.
+
+    - `Artist End Date`: frequently missing (especially for living artists)  
+    - `Artist Gender`: missing for a large portion of records  
+    - `Medium`: high missingness for certain object types  
+    - `Dimensions`: often missing or incomplete depending on artwork  
+    - `Object Date`: sometimes missing or inconsistently recorded  
+
+- **Moderate missingness:**
+  - Some key variables contain noticeable but manageable levels of missing data:
+
+    - `Artist Nationality`: missing or inconsistent in a portion of records  
+    - `Artist Begin Date`: occasionally missing or stored in non-standard formats  
+    - `Artist Display Name`: mostly complete but occasionally missing  
+
+- **Low or no missingness:**
+  - The following variables are largely complete and reliable:
+
+    - `Object ID`: primary identifier (no missing values)  
+    - `Object Number`: accession number  
+    - `Title`: artwork title  
+
+### Consistency and accuracy issues:
+
+In addition to missing values, the MET dataset presented several consistency challenges. Nationality values were particularly inconsistent, with variations such as “USA,” “US,” “United States,” and entries containing extra characters or delimiters. These inconsistencies required standardization through both Python (using mapping dictionaries) and OpenRefine (using clustering and manual correction). Date fields also varied in format, often appearing as strings with prefixes (e.g., “c.”) or ranges (e.g., “1945–46”), which required extraction of standardized numeric values.
+
+Another important issue was the repetition of artist information across multiple artwork records. Because the dataset is structured at the artwork level, the same artist may appear many times, which can influence counts of representation if not interpreted carefully. While this does not represent a data error, it is an important characteristic that affects how the dataset is analyzed.
+
+### Overall assessment:
+
+Overall, the MET dataset is rich in information but requires significant preprocessing to be suitable for analysis. While missing values and inconsistencies are present, most critical variables needed for the research question—such as artist name, nationality, and birth year—can be cleaned and standardized effectively. By filtering incomplete records, standardizing key fields, and reducing the dataset to relevant variables, we were able to produce a high-quality derived dataset suitable for analyzing geographic representation.
+
+Despite these improvements, it is important to recognize that the dataset reflects institutional biases in collection and cataloging. As such, the results of the analysis should be interpreted as insights into museum representation rather than definitive measures of global artistic diversity.
 
 ---
 
