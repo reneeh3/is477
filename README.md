@@ -53,57 +53,58 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
   
 ### Dataset 2: *MoMA: Artworks.txt*
-- **Location in repository:**  [MoMA: Artworks.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip)
+- **Location in repository:** [MoMA: Artworks.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
-- **Description**: This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
+- **Description:** This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
+  - Format: CSV (UTF-8 encoded)
   - Rows: 160,632 individual artworks
-  - Columns: 
-  - **Basic artwork info:**
-    - `Title`: Title of artwork  
-    - `Artist`: Name of artist  
-    - `ConstituentID`: Artist identifier (links to Artists dataset)  
+  - Columns:
+    - **Basic artwork info:**
+      - `Title`: Title of artwork  
+      - `Artist`: Name of artist  
+      - `ConstituentID`: Artist identifier (links to Artists dataset)  
 
-  - **Artist-related metadata (duplicated from artist dataset):**
-    - `ArtistBio`: Short description of the artist  
-    - `Nationality`: Artist nationality  
-    - `BeginDate`: Artist birth year  
-    - `EndDate`: Artist death year  
-    - `Gender`: Artist gender  
+    - **Artist-related metadata (duplicated from artist dataset):**
+      - `ArtistBio`: Short description of the artist  
+      - `Nationality`: Artist nationality  
+      - `BeginDate`: Artist birth year  
+      - `EndDate`: Artist death year  
+      - `Gender`: Artist gender  
 
-  - **Artwork-specific metadata:**
-    - `Date`: Year or year range the artwork was created  
-    - `Medium`: Materials used to create 
-    - `Dimensions`: Physical size description  
-    - `Classification`: Type of artwork (e.g., architecture, sculpture)  
-    - `Department`: Museum department  
+    - **Artwork-specific metadata:**
+      - `Date`: Year or year range the artwork was created  
+      - `Medium`: Materials used to create  
+      - `Dimensions`: Physical size description  
+      - `Classification`: Type of artwork (e.g., architecture, sculpture)  
+      - `Department`: Museum department  
 
-  - **Museum/catalog information:**
-    - `CreditLine`: Acquisition credit  
-    - `AccessionNumber`: Unique accession number  
-    - `DateAcquired`: Date the museum acquired the artwork  
-    - `Cataloged`: Whether the item is cataloged  
-    - `ObjectID`: Unique artwork identifier  
+    - **Museum/catalog information:**
+      - `CreditLine`: Acquisition credit  
+      - `AccessionNumber`: Unique accession number  
+      - `DateAcquired`: Date the museum acquired the artwork  
+      - `Cataloged`: Whether the item is cataloged  
+      - `ObjectID`: Unique artwork identifier  
 
-  - **Links and display info:**
-    - `URL`: Link to artwork page  
-    - `ImageURL`: Link to artwork image  
-    - `OnView`: Whether the artwork is currently on display  
+    - **Links and display info:**
+      - `URL`: Link to artwork page  
+      - `ImageURL`: Link to artwork image  
+      - `OnView`: Whether the artwork is currently on display  
 
-  - **Physical measurement fields (numeric):**
-    - `Circumference (cm)`  
-    - `Depth (cm)`  
-    - `Diameter (cm)`  
-    - `Height (cm)`  
-    - `Length (cm)`  
-    - `Weight (kg)`  
-    - `Width (cm)`  
-    - `Seat Height (cm)`  
-    - `Duration (sec.)`  
+    - **Physical measurement fields (numeric):**
+      - `Circumference (cm)`  
+      - `Depth (cm)`  
+      - `Diameter (cm)`  
+      - `Height (cm)`  
+      - `Length (cm)`  
+      - `Weight (kg)`  
+      - `Width (cm)`  
+      - `Seat Height (cm)`  
+      - `Duration (sec.)`  
 
   - Primary identifier: `ObjectID`
 - **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications. While MoMA’s full collection contains nearly 200,000 works, this dataset includes only those that have been digitized/cataloged, so some artists, regions, or time periods may be underrepresented.
-- **Ethical/legal considerations:** Similarly to  Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The Metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum. The dataset is provided “as is” for research purposes. Some records are incomplete, inconsistent, or not curatorially verified, which may affect accuracy. Therefore, results derived from this dataset should be interpreted cautiously and not treated as definitive measures of representation.
+- **Ethical/legal considerations:** Similarly to Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum. The dataset is provided “as is” for research purposes. Some records are incomplete, inconsistent, or not curatorially verified, which may affect accuracy. Therefore, results derived from this dataset should be interpreted cautiously and not treated as definitive measures of representation.
 - **Relevance to research questions:** This dataset shows which artists are actually represented in MoMA through their artworks in the collection. Linking artists to the artworks, it helps measure how frequently each geographic origin appears. It also allows for analysis of representation across departments and classifications if interested.
 
 The museum periodically updates both MoMA datasets. This project uses a snapshot of the data accessed on April 1, 2026, and results may differ if the dataset is updated in the future. They are also both released under a CC0 public domain license, allowing unrestricted use. However, MoMA requests proper attribution, and any modifications to the dataset should be clearly indicated.
