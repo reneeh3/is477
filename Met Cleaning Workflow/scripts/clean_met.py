@@ -1,9 +1,20 @@
+# =========================
+# IMPORT LIBRARIES
+# =========================
 import pandas as pd
 import numpy as np
 import re
 
-MET_URL = "https://media.githubusercontent.com/media/metmuseum/openaccess/master/MetObjects.csv"
 
+# =========================
+# FILE PATH
+# =========================
+MET_FILE = "data/MetObjects_small.csv"
+
+
+# =========================
+# NATIONALITY MAPPING
+# =========================
 NATIONALITY_MAP = {
     "American": "American", "United States": "American", "USA": "American", "US": "American",
     "British": "British", "English": "British", "Scottish": "British", "Welsh": "British", "UK": "British",
@@ -16,25 +27,18 @@ NATIONALITY_MAP = {
     "Canadian": "Canadian",
 }
 
+
+# =========================
+# CLEANING FUNCTIONS
+# =========================
 def clean_nationality(val):
     if pd.isna(val):
         return np.nan
     val = str(val).strip().strip("()").split(",")[0].strip()
-    if val in ("", "nan", "None"):
+    if val in ("", "nan", "None", "None|", "|"):
         return np.nan
     return NATIONALITY_MAP.get(val, val)
 
-def standardize_gender(val):
-    if pd.isna(val):
-        return np.nan
-    val = str(val).strip().strip("()").lower()
-    if val in ("male", "man", "m"):
-        return "Male"
-    if val in ("female", "woman", "f"):
-        return "Female"
-    if val in ("non-binary", "nonbinary", "non binary"):
-        return "Non-Binary"
-    return np.nan
 
 def extract_year(val):
     if pd.isna(val):
@@ -42,74 +46,77 @@ def extract_year(val):
     match = re.search(r"\b(1[0-9]{3}|20[0-2][0-9])\b", str(val))
     return int(match.group()) if match else np.nan
 
+
+# =========================
+# MAIN CLEANING PIPELINE
+# =========================
 def main():
-    artists = pd.read_csv(ARTISTS_FILE, sep="\t")
-    artworks = pd.read_csv(ARTWORKS_FILE, sep="\t")
 
-    artists.columns = artists.columns.str.strip().str.lower().str.replace(" ", "_")
-    artworks.columns = artworks.columns.str.strip().str.lower().str.replace(" ", "_")
+    # Load dataset
+    met = pd.read_csv(MET_FILE, low_memory=False)
 
-    for col in ("displayname", "nationality", "gender"):
-        if col in artists.columns:
-            artists[col] = artists[col].astype("string").str.strip()
+    # Standardize column names
+    met.columns = (
+        met.columns.str.strip()
+        .str.lower()
+        .str.replace(" ", "_")
+    )
 
-    for col in ("title", "date"):
-        if col in artworks.columns:
-            artworks[col] = artworks[col].astype("string").str.strip()
+    # Clean text columns
+    for col in met.select_dtypes(include="object").columns:
+        met[col] = met[col].astype("string").str.strip()
 
-    artists["constituentid"] = artists["constituentid"].astype("string").str.strip()
-    artworks["constituentid"] = artworks["constituentid"].astype("string").str.strip()
-    artworks["objectid"] = artworks["objectid"].astype("string").str.strip()
-
-    artists["begindate"] = pd.to_numeric(artists["begindate"], errors="coerce").replace(0, np.nan)
-    artists["enddate"] = pd.to_numeric(artists["enddate"], errors="coerce").replace(0, np.nan)
-
-    artists["nationality"] = artists["nationality"].apply(clean_nationality)
-    artists["gender"] = artists["gender"].apply(standardize_gender)
-
-    if "year_created" not in artworks.columns:
-        artworks["year_created"] = artworks["date"].apply(extract_year)
-    else:
-        artworks["year_created"] = pd.to_numeric(artworks["year_created"], errors="coerce")
-
-    artists = artists.drop_duplicates(subset="constituentid")
-
-    artist_lookup = artists[[
-        "constituentid",
-        "displayname",
-        "nationality",
-        "gender",
-        "begindate",
-        "enddate"
-    ]].rename(columns={
-        "constituentid": "artist_constituentid",
-        "displayname": "artist_name",
-        "nationality": "artist_nationality",
-        "gender": "artist_gender",
-        "begindate": "artist_birthyear",
-        "enddate": "artist_deathyear",
+    # Rename columns to match project schema
+    met = met.rename(columns={
+        "object_id": "objectid",
+        "object_number": "accessionnumber",
+        "artist_display_name": "artist_name",
+        "artist_nationality": "nationality_clean",
+        "artist_begin_date": "artist_birthyear",
+        "artist_end_date": "artist_deathyear",
+        "object_date": "date"
     })
 
-    df = artworks.merge(
-        artist_lookup,
-        left_on="constituentid",
-        right_on="artist_constituentid",
-        how="left"
-    )
+    # Extract year fields
+    met["artist_birthyear"] = met["artist_birthyear"].apply(extract_year)
+    met["artist_deathyear"] = met["artist_deathyear"].apply(extract_year)
+    met["year_created"] = met["date"].apply(extract_year)
 
-    df["nationality_clean"] = df["artist_nationality"]
-    df["gender_clean"] = df["artist_gender"]
+    # Clean nationality values
+    met["nationality_clean"] = met["nationality_clean"].apply(clean_nationality)
 
-    df = (
-        df.dropna(subset=["objectid", "accessionnumber"], how="all")
-          .drop_duplicates()
-          .drop_duplicates(subset=["objectid", "artist_constituentid"])
-          .reset_index(drop=True)
-    )
+    # Select final columns
+    final = met[[
+        "title",
+        "artist_name",
+        "artist_birthyear",
+        "artist_deathyear",
+        "nationality_clean"
+    ]].copy()
 
-    print(df.shape)
-    print(df.duplicated().sum())
-    print(df["nationality_clean"].value_counts().head(10))
-    print(df[["objectid", "artist_constituentid", "nationality_clean", "gender_clean"]].isna().sum())
+    # Remove incomplete rows
+    final = final.dropna(subset=[
+        "title",
+        "artist_name",
+        "artist_birthyear",
+        "nationality_clean"
+    ])
 
-    df.to_csv(snakemake.output[0], index=False)
+    # Remove duplicates
+    final = final.drop_duplicates().reset_index(drop=True)
+
+    # Print summary statistics
+    print("Final dataset shape:", final.shape)
+    print("\nTop nationalities:")
+    print(final["nationality_clean"].value_counts().head(10))
+    print("\nMissing values:")
+    print(final.isna().sum())
+
+    # Save output
+    try:
+        output_path = snakemake.output[0]
+    except NameError:
+        output_path = "results/met_snakefile_cleaned.csv"
+
+    final.to_csv(output_path, index=False)
+    print("\nSaved to:", output_path)
