@@ -108,10 +108,45 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
 The museum periodically updates both MoMA datasets. This project uses a snapshot of the data accessed on April 1, 2026, and results may differ if the dataset is updated in the future. They are also both released under a CC0 public domain license, allowing unrestricted use. However, MoMA requests proper attribution, and any modifications to the dataset should be clearly indicated.
 
-### Dataset 3: MET
-- 
-- 
-- 
+### Dataset 3: *MET: Artists.txt*
+- **Location in repository:**  *[]*
+- **Source:** Open-access dataset [Metropolitan Museum of Art Open Access](https://github.com/metmuseum/openaccess), Dataset accessed April 2026  
+- **Description:** Contains key information about individual artist profiles derived from the MET collections dataset. Unlike the MoMA dataset, the original MET data does not provide a separate artist table, so this dataset was created by extracting and restructuring artist-related fields from the artwork records. It reflects institutional cataloging and curation decisions and therefore does not represent a complete or unbiased list of artists. Some records may contain incomplete or inconsistent metadata due to variations in documentation.  
+- **Structure:**
+  - Format: TXT (tab-separated)
+  - Rows: ~48,000 individual artists  
+  - Columns: 6 variables  
+    - `ConstituentID`: Artist identifier (parsed from MET dataset)  
+    - `DisplayName`: Artist name  
+    - `Nationality`: Artist nationality  
+    - `Gender`  
+    - `BeginDate`: Birth year  
+    - `EndDate`: Death year  
+  - Primary identifier: `ConstituentID`  
+- **Content & characteristics:** This is an artist-level dataset derived from the MET artwork dataset, containing demographic attributes such as nationality, gender, and birth and death years. Compared to the MoMA Artists dataset, it includes fewer variables and required significant preprocessing to standardize values. Many fields contain missing or inconsistent entries, particularly in nationality and gender, which required cleaning and normalization.  
+- **Ethical/legal considerations:** As with the MoMA dataset, this dataset reflects institutional decisions about which artists are documented and preserved. Missing or inconsistent demographic data may affect interpretations of representation. Additionally, nationality labels are assigned by the museum and may not accurately reflect how artists identify themselves.  
+- **Relevance to research questions:** This dataset provides the key variables needed to analyze geographic origin and compare artist representation between the MET and MoMA datasets.
+
+---
+
+### Dataset 4: *MET: Artworks.txt*
+- **Location in repository:**  *[]*
+- **Source:** Open-access dataset [Metropolitan Museum of Art Open Access](https://github.com/metmuseum/openaccess), Dataset accessed April 2026  
+- **Description:** This dataset contains information about artworks in the MET collection, cleaned and reduced from the original MET dataset. It includes core identifiers and metadata linking artworks to artists, along with basic descriptive information. The dataset was filtered and simplified to improve usability, reduce file size, and align its structure with the MoMA Artworks dataset.  
+- **Structure:**
+  - Format: TXT (tab-separated)
+  - Rows: ~200,000+ artwork records (after cleaning and filtering)  
+  - Columns: ~6–10 variables  
+    - `ObjectID`: Unique artwork identifier  
+    - `AccessionNumber`: Museum accession number  
+    - `Title`: Title of artwork  
+    - `ConstituentID`: Artist identifier (links to Artists dataset)  
+    - `Date`: Artwork creation date  
+    - `YearCreated`: Extracted year of creation  
+  - Primary identifier: `ObjectID`  
+- **Content & characteristics:** This is an artwork-level dataset linked to the artist dataset through `ConstituentID`. The original MET dataset contained both artist and artwork information within a single table, requiring restructuring to isolate artwork-level data. The dataset includes repeated artist entries across multiple artworks, reflecting the object-based nature of museum collections. Many records contain missing or approximate dates, which required standardization through year extraction.  
+- **Ethical/legal considerations:** The dataset reflects curatorial and institutional decisions regarding acquisition and cataloging and therefore does not represent a complete or unbiased sample of global artworks. Data quality varies across records, with some containing incomplete or inconsistent metadata. As such, results derived from this dataset should be interpreted cautiously.  
+- **Relevance to research questions:** This dataset shows how frequently artists from different geographic origins appear in the MET collection. When combined with the artist dataset, it enables analysis of representation patterns and direct comparison with the MoMA dataset.
 
 ---
 
