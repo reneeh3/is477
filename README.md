@@ -53,7 +53,7 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
   
 ### Dataset 2: *MoMA: Artworks.txt*
-- **Location in repository:**  [MoMA: Artworks.txt]((https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip))
+- **Location in repository:**  [MoMA: Artworks.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
 - **Description**: This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
