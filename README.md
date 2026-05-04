@@ -110,7 +110,7 @@ The museum periodically updates both MoMA datasets. This project uses a snapshot
 
 ### Dataset 3: *MET: MetObjects.csv*
 - **Location in repository:** [MetObjects_csv.zip](https://github.com/reneeh3/is477/blob/88d9c8cc519c2e3528372bedea528e0b20797174/Met%20datasets/MetObjects_csv.zip)
-- **Source:** Open-access dataset [Metropolitan Museum of Art Open Access](https://github.com/metmuseum/openaccess), Dataset accessed April 2026  
+- **Source:** Open-access dataset [Met Github link](https://github.com/metmuseum), [Dataset accessed April 2026](https://github.com/metmuseum/openaccess)
 - **Description:** This dataset contains information about artworks and associated artist metadata from the Metropolitan Museum of Art collection. Unlike the MoMA datasets, which separate artists and artworks into different files, the MET dataset stores both artwork-level and artist-level information within a single table. The dataset is derived from the museum’s internal collections database and includes only digitized and cataloged works, reflecting institutional acquisition and curation decisions rather than a complete representation of all artworks or artists.  
 - **Structure:**
   - Format: CSV (UTF-8 encoded)
