@@ -51,7 +51,6 @@ We used publicly available datasets from both museums, cleaned and standardized 
 - **Ethical/legal considerations:** While this is a large, public museum dataset, it still reflects institutional choices about which artists are documented. Missing demographic information can limit how we can interpret how fully artists are represented. Additionally, the fields may be reflective of what the museum labels the artists and not how the artists actually identify.
 - **Relevance to research questions:** The dataset provides the artists' nationalities and birthdate information needed to analyze geographic origin. It is generally more accurate and/or filled out than the Artwork dataset. It will let us study the background represented in MoMA and to compare it with the MET dataset.
 
-  
 ### Dataset 2: *MoMA: Artworks.txt*
 - **Location in repository:** [MoMA: Artworks.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
@@ -60,47 +59,36 @@ We used publicly available datasets from both museums, cleaned and standardized 
   - Format: CSV (UTF-8 encoded)
   - Rows: 160,632 individual artworks
   - Columns:
-    - **Basic artwork info:**
-      - `Title`: Title of artwork  
-      - `Artist`: Name of artist  
-      - `ConstituentID`: Artist identifier (links to Artists dataset)  
-
-    - **Artist-related metadata (duplicated from artist dataset):**
-      - `ArtistBio`: Short description of the artist  
-      - `Nationality`: Artist nationality  
-      - `BeginDate`: Artist birth year  
-      - `EndDate`: Artist death year  
-      - `Gender`: Artist gender  
-
-    - **Artwork-specific metadata:**
-      - `Date`: Year or year range the artwork was created  
-      - `Medium`: Materials used to create  
-      - `Dimensions`: Physical size description  
-      - `Classification`: Type of artwork (e.g., architecture, sculpture)  
-      - `Department`: Museum department  
-
-    - **Museum/catalog information:**
-      - `CreditLine`: Acquisition credit  
-      - `AccessionNumber`: Unique accession number  
-      - `DateAcquired`: Date the museum acquired the artwork  
-      - `Cataloged`: Whether the item is cataloged  
-      - `ObjectID`: Unique artwork identifier  
-
-    - **Links and display info:**
-      - `URL`: Link to artwork page  
-      - `ImageURL`: Link to artwork image  
-      - `OnView`: Whether the artwork is currently on display  
-
-    - **Physical measurement fields (numeric):**
-      - `Circumference (cm)`  
-      - `Depth (cm)`  
-      - `Diameter (cm)`  
-      - `Height (cm)`  
-      - `Length (cm)`  
-      - `Weight (kg)`  
-      - `Width (cm)`  
-      - `Seat Height (cm)`  
-      - `Duration (sec.)`  
+    - `Title`: Title of artwork  
+    - `Artist`: Name of artist  
+    - `ConstituentID`: Artist identifier (links to Artists dataset)  
+    - `ArtistBio`: Short description of the artist  
+    - `Nationality`: Artist nationality  
+    - `BeginDate`: Artist birth year  
+    - `EndDate`: Artist death year  
+    - `Gender`: Artist gender  
+    - `Date`: Year or year range the artwork was created  
+    - `Medium`: Materials used to create  
+    - `Dimensions`: Physical size description  
+    - `Classification`: Type of artwork (e.g., architecture, sculpture)  
+    - `Department`: Museum department  
+    - `CreditLine`: Acquisition credit  
+    - `AccessionNumber`: Unique accession number  
+    - `DateAcquired`: Date the museum acquired the artwork  
+    - `Cataloged`: Whether the item is cataloged  
+    - `ObjectID`: Unique artwork identifier  
+    - `URL`: Link to artwork page  
+    - `ImageURL`: Link to artwork image  
+    - `OnView`: Whether the artwork is currently on display  
+    - `Circumference (cm)`  
+    - `Depth (cm)`  
+    - `Diameter (cm)`  
+    - `Height (cm)`  
+    - `Length (cm)`  
+    - `Weight (kg)`  
+    - `Width (cm)`  
+    - `Seat Height (cm)`  
+    - `Duration (sec.)`  
 
   - Primary identifier: `ObjectID`
 - **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications. While MoMA’s full collection contains nearly 200,000 works, this dataset includes only those that have been digitized/cataloged, so some artists, regions, or time periods may be underrepresented.
