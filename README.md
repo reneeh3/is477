@@ -20,9 +20,9 @@ Support questions include:
 * How has representation changed over time (with the measure being the artists' birthdays)?
 
 We used publicly available datasets from both museums, cleaned and standardized key variables, and prepared them to be merged. Some of our preliminary findings from both are:
-- For the MoMA dataset, representation seems to be concentrated in a small number of dominant regions, namely the Americas, followed by Europe.
-- **INSERT MORE**
-- **INSERT ONE MORE?**
+- Representation is heavily concentrated in a few dominant regions, particularly the Americas and Europe, indicating a strong Western bias in the collection.
+- There is evidence of increasing geographic diversity in more recent periods, with a gradual rise in artists from non-Western regions.
+- Despite this shift, regions such as Africa and parts of Asia remain underrepresented, suggesting persistent historical imbalances in global art representation.
 
 ---
 
