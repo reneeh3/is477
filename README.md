@@ -378,3 +378,12 @@ Overall, these challenges highlight the complexity of working with real-world cu
 - [Python Standard Library (re, os, json, hashlib)](https://docs.python.org/3/library/)
 
 - [Requests Library](https://docs.python-requests.org)
+
+
+---
+
+## Libraries Used
+
+This project uses the following libraries: `pandas`, `NumPy`, `matplotlib`, `requests`, `hashlib`, `re`, and `os`.
+
+The workflow is automated using Snakemake, and additional data cleaning steps are applied using OpenRefine (via saved operation histories).
