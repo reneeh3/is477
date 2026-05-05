@@ -3,6 +3,12 @@ rule all:
         "results/moma_snakefile_cleaned.csv",
         "results/met_snakefile_cleaned.csv"
 
+rule clean_moma:
+    output:
+        "results/moma_snakefile_cleaned.csv"
+    script:
+        "scripts/clean_moma.py"
+
 rule clean_met:
     input:
         artists="data/artists.txt",
