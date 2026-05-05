@@ -308,28 +308,41 @@ Overall, these challenges highlight the complexity of working with real-world cu
 ---
 
 ## Reproducing
-
-
 1. Clone the project repository and navigate into it:
    ```bash
-   git clone <your-repo-link>
+   git clone <your-repository-link>
    cd is477
-   ```
-2.  Install required dependencies
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-3.  Navigate to `Data Cleaning Workflow` folder and run both cleaning workflows using Snakemake:
-   ```bash
-snakemake --cores 1
-   ```
-This will automatically download the MoMA datasets from the official MoMA GitHub repository, run `clean_moma.py`, and `generate moma_snakefile_cleaned.csv`. It will also read the Met datasets from `data/artists.txt` and `data/artworks.txt`, run `clean_met.py`, and generate `met_snakefile_cleaned.csv`.
 
-4.  Open each cleaned dataset in OpenRefine and apply the corresponding saved history file:
-- Load `moma_snakefile_cleaned.csv` and apply `apply_openrefine_to_moma.json`, then export as `final_moma.csv`
-- Load `met_snakefile_cleaned.csv` and apply `apply_openrefine_to_met.json`, then export as `final_met.csv`
-5. Run `/is477/Analysis/analysis.py` to generate visualizations into an `analysis_figures` folder.
-  
+2. Install required dependencies:
+    ```bash
+    pip3 install -r requirements.txt
+
+4. Run the full workflow using Snakemake:
+   ```bash
+   snakemake -s "Data Cleaning Workflow/Snakefile" --cores 1
+
+6. Workflow Overview
+
+The pipeline executes the following steps automatically:
+- Downloads the MoMA Artists and Artworks datasets from the official MoMA GitHub repository
+- Downloads the MET dataset (MetObjects.csv) from the official MET Open Access repository
+- Cleans and standardizes both datasets using Python scripts
+- Applies OpenRefine transformation histories programmatically
+- Merges the cleaned datasets into a unified dataset
+- Runs analysis scripts and generates visualizations
+
+5. Final Outputs
+
+After execution, the following files are produced:
+- results/moma_snakefile_cleaned.csv
+- results/met_snakefile_cleaned.csv
+- results/final_moma.csv
+- results/final_met.csv
+- results/combined_moma_met.csv
+- Analysis/analysis_figures/nationality_proportions_by_museum.png
+- Analysis/analysis_figures/birth_year_trends_met.png
+- Analysis/analysis_figures/birth_year_trends_moma.png
+
 ---
 
 ## References
