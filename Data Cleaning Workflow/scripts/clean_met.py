@@ -40,7 +40,7 @@ def extract_year(val):
 def main():
 
     # Load dataset
-    met = pd.read_csv(MET_FILE, low_memory=False)
+    met = pd.read_csv(snakemake.input[0], low_memory=False)
 
     # Standardize column names
     met.columns = (
