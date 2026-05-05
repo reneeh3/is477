@@ -3,16 +3,35 @@ rule all:
         "results/moma_snakefile_cleaned.csv",
         "results/met_snakefile_cleaned.csv"
 
+
+rule download_moma:
+    output:
+        "data/moma_artists.csv",
+        "data/moma_artworks.csv"
+    script:
+        "scripts/download_moma.py"
+
+
+rule download_met:
+    output:
+        "data/met_objects.csv"
+    script:
+        "scripts/download_met.py"
+
+
 rule clean_moma:
+    input:
+        "data/moma_artists.csv",
+        "data/moma_artworks.csv"
     output:
         "results/moma_snakefile_cleaned.csv"
     script:
         "scripts/clean_moma.py"
 
+
 rule clean_met:
     input:
-        artists="data/artists.txt",
-        artworks="data/artworks.txt"
+        "data/met_objects.csv"
     output:
         "results/met_snakefile_cleaned.csv"
     script:
