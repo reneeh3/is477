@@ -30,7 +30,6 @@ We used publicly available datasets from both museums, cleaned and standardized 
 ## Data Profile
 
 ### Dataset 1: *MoMA: Artists.txt*
-- **Location in repository:** [MoMA:Artists.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/43399bad2fad626a0750ab6801ced6f1e83b0a41/Artists.csv)
 - **Description:** Contains key information about individual artist profiles in the MoMA collections by artist ID number. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artists. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
@@ -52,7 +51,6 @@ We used publicly available datasets from both museums, cleaned and standardized 
 - **Relevance to research questions:** The dataset provides the artists' nationalities and birthdate information needed to analyze geographic origin. It is generally more accurate and/or filled out than the Artwork dataset. It will let us study the background represented in MoMA and to compare it with the MET dataset.
 
 ### Dataset 2: *MoMA: Artworks.txt*
-- **Location in repository:** [MoMA: Artworks.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artworks.txt.zip)
 - **Source:** Open-access dataset [MoMA github link](https://github.com/museumofmodernart/collection), [Dataset Accessed April 1st, 2026](https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv)
 - **Description:** This dataset includes information about the MoMA collection's artworks. The dataset is derived from MoMA's internal collections database and includes only accessioned and catalogued works. It reflects institutional decisions and curation, so it is not a complete representation of all artworks. Some records are marked as not curatorially approved, so the metadata may be incomplete or unverified. 
 - **Structure:**
@@ -103,7 +101,7 @@ The museum periodically updates both MoMA datasets. This project uses a snapshot
 - **Description:** This dataset contains information about artworks and associated artist metadata from the Metropolitan Museum of Art collection. Unlike the MoMA datasets, which separate artists and artworks into different files, the MET dataset stores both artwork-level and artist-level information within a single table. The dataset is derived from the museum’s internal collections database and includes only digitized and cataloged works, reflecting institutional acquisition and curation decisions rather than a complete representation of all artworks or artists.  
 - **Structure:**
   - Format: CSV (UTF-8 encoded)
-  - Rows: ~70,000 records (reduced for this project)
+  - Rows: 484957 rows
   - Columns: 9 variables  
     - `Object ID`: Unique artwork identifier  
     - `Object Number`: Museum accession number  
@@ -211,7 +209,7 @@ Overall, the MoMA and MET datasets are rich in information but require significa
 
 ## Data Cleaning
 
-The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine supported manual inspection and correction of inconsistencies. These cleaning and transformation decisions directly influence how representation is measured, particularly by ensuring that nationality counts reflect consistent and comparable values across datasets.
+The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine was used offline to create transformation histories in JSON form, which are then applied programmatically using a Python script. These cleaning and transformation decisions directly influence how representation is measured, particularly by ensuring that nationality counts reflect consistent and comparable values across datasets.
 
 ### Python Cleaning
 
@@ -235,7 +233,7 @@ Using text faceting and clustering, variations of the same nationality were iden
 
 Additional transformations included renaming columns for clarity and removing unnecessary variables such as measurement fields, URLs, and other metadata that were not relevant to the research question. OpenRefine complemented the Python cleaning process by enabling efficient manual corrections that were difficult to fully automate.
 
-To ensure transparency, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`.
+To ensure transparency, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine_moma.json` and `apply_openrefine_met.json`.
 
 ### Data Integration
 
@@ -247,13 +245,21 @@ This integration strategy allows for direct comparison between the two museums w
 
 ### Overall Workflow
 
-The overall workflow followed a structured pipeline:
+The overall workflow that we initially performed followed a structured pipeline:
 
 1. Load raw datasets
 2. Clean and standardize variables using Python
 3. Apply manual corrections using OpenRefine
 4. Integrate datasets into a unified schema
 5. Perform analysis and visualization
+
+We then cleaned up the workflow to be fully automated using Snakemake and follow an end-to-end pipeline:
+
+1. Programmatically download the MoMA Artists and Artworks datasets and the MET dataset from their official repositories
+2. Clean and standardize each dataset using Python scripts
+3. Apply OpenRefine transformation histories programmatically using saved JSON operation files
+4. Align both datasets to a common schema and combine them into a unified dataset
+5. Perform analysis and generate visualizations from the integrated dataset
 
 ---
   
@@ -354,9 +360,10 @@ Overall, these challenges highlight the complexity of working with real-world cu
 
    - The workflow is fully automated and does not require any pre-existing CSV files  
    - All datasets are acquired programmatically during execution  
-   - No manual OpenRefine steps are required  
+   - No manual OpenRefine steps are required to execute
    - Run using `python3 -m snakemake` if `snakemake` is not on your PATH  
    - The pipeline is designed to run in a clean environment
+   - SHA256 hashes are generated and printed during dataset download to verify data integrity and ensure that the same data files are used across runs, supporting reproducibility
 
 ---
 
