@@ -1,13 +1,14 @@
 rule all:
     input:
-        "results/moma_snakefile_cleaned.csv",
-        "results/met_snakefile_cleaned.csv"
+        "Analysis/analysis_figures/nationality_proportions_by_museum.png",
+        "Analysis/analysis_figures/birth_year_trends_met.png",
+        "Analysis/analysis_figures/birth_year_trends_moma.png"
 
 
 rule download_moma:
     output:
-        "data/moma_artists.csv",
-        "data/moma_artworks.csv"
+        artists="data/moma_artists.csv",
+        artworks="data/moma_artworks.csv"
     script:
         "scripts/download_moma.py"
 
@@ -21,8 +22,8 @@ rule download_met:
 
 rule clean_moma:
     input:
-        "data/moma_artists.csv",
-        "data/moma_artworks.csv"
+        artists="data/moma_artists.csv",
+        artworks="data/moma_artworks.csv"
     output:
         "results/moma_snakefile_cleaned.csv"
     script:
@@ -36,3 +37,44 @@ rule clean_met:
         "results/met_snakefile_cleaned.csv"
     script:
         "scripts/clean_met.py"
+
+
+rule openrefine_moma:
+    input:
+        data="results/moma_snakefile_cleaned.csv",
+        operations="apply_openrefine_to_moma.json"
+    output:
+        "results/final_moma.csv"
+    script:
+        "scripts/apply_openrefine.py"
+
+
+rule openrefine_met:
+    input:
+        data="results/met_snakefile_cleaned.csv",
+        operations="apply_openrefine_to_met.json"
+    output:
+        "results/final_met.csv"
+    script:
+        "scripts/apply_openrefine.py"
+
+
+rule combine:
+    input:
+        moma="results/final_moma.csv",
+        met="results/final_met.csv"
+    output:
+        "results/combined_moma_met.csv"
+    script:
+        "scripts/combine.py"
+
+
+rule analysis:
+    input:
+        "results/combined_moma_met.csv"
+    output:
+        "Analysis/analysis_figures/nationality_proportions_by_museum.png",
+        "Analysis/analysis_figures/birth_year_trends_met.png",
+        "Analysis/analysis_figures/birth_year_trends_moma.png"
+    script:
+        "Analysis/analysis.py"
