@@ -328,7 +328,7 @@ This will automatically download the MoMA datasets from the official MoMA GitHub
 4.  Open each cleaned dataset in OpenRefine and apply the corresponding saved history file:
 - Load `moma_snakefile_cleaned.csv` and apply `apply_openrefine_to_moma.json`, then export as `final_moma.csv`
 - Load `met_snakefile_cleaned.csv` and apply `apply_openrefine_to_met.json`, then export as `final_met.csv`
-5. Run `/is477/Analysis/analysis.py` to generate visualizations into an `Analysis figures`folder.
+5. Run `/is477/Analysis/analysis.py` to generate visualizations into an `analysis_figures` folder.
   
 ---
 
