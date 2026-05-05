@@ -308,21 +308,23 @@ Overall, these challenges highlight the complexity of working with real-world cu
 ---
 
 ## Reproducing
+
+## Reproducing
 1. Clone the project repository and navigate into it:
-   ```bash
-   git clone <your-repository-link>
-   cd is477
-   ```
+```bash
+   git clone 
+   cd is477/Snakemake_Workflow
+```
 
 2. Install required dependencies:
-   ```bash
+```bash
    pip3 install -r requirements.txt
-   ```
+```
 
 3. Run the full workflow using Snakemake:
-   ```bash
-   snakemake -s "Data Cleaning Workflow/Snakefile" --cores 1
-   ```
+```bash
+   python3 -m snakemake --cores 1
+```
 
 4. **Workflow Overview**
 
@@ -331,7 +333,7 @@ Overall, these challenges highlight the complexity of working with real-world cu
    - Downloads the MoMA Artists and Artworks datasets from the official MoMA GitHub repository  
    - Downloads the MET dataset (`MetObjects.csv`) from the official MET Open Access repository  
    - Cleans and standardizes both datasets using Python scripts  
-   - Applies OpenRefine transformation histories programmatically  
+   - Applies OpenRefine transformation histories programmatically via `apply_openrefine.py`  
    - Merges the cleaned datasets into a unified dataset  
    - Runs analysis scripts and generates visualizations  
 
@@ -344,16 +346,18 @@ Overall, these challenges highlight the complexity of working with real-world cu
    - `results/final_moma.csv`  
    - `results/final_met.csv`  
    - `results/combined_moma_met.csv`  
-   - `Analysis/analysis_figures/nationality_proportions_by_museum.png`  
-   - `Analysis/analysis_figures/birth_year_trends_met.png`  
-   - `Analysis/analysis_figures/birth_year_trends_moma.png`  
+   - `Snakemake_Workflow/analysis_figures/nationality_proportions_by_museum.png`  
+   - `Snakemake_Workflow/analysis_figures/birth_year_trends_met.png`  
+   - `Snakemake_Workflow/analysis_figures/birth_year_trends_moma.png`
 
 6. **Notes**
 
    - The workflow is fully automated and does not require any pre-existing CSV files  
    - All datasets are acquired programmatically during execution  
    - No manual OpenRefine steps are required  
-   - The pipeline is designed to run in a clean environment  
+   - Run using `python3 -m snakemake` if `snakemake` is not on your PATH  
+   - The pipeline is designed to run in a clean environment
+
 ---
 
 ## References
