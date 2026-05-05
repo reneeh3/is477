@@ -263,7 +263,7 @@ The comparative analysis of the cleaned datasets from the Metropolitan Museum of
 Despite this shared pattern of Western dominance, there are notable differences between the two museums. Nationality Proportions figure (Figure 1) show that both museums are dominated by Western artists, which logically makes sense considering these are the two largest museums in North America. However, the two institutions differ a lot in make up of Western Nationality. MoMA's collection is 49% American artists, compared to 36.1% at the MET. The MET shows relatively stronger representation of Italian (13%), British (12.6%), and French (17.2%) artists, reflecting its broader historical and encyclopedic scope. Notably, the MET's top 10 includes Netherlandish (2.6%) and Flemish (1.1%) artists which are categories that are not present at all in MoMA's top 10, consistent with its deeper collection in Old Master works. MoMA's top 10, by contrast, includes Russian (2.8%), Swiss (1.7%), and Argentine (1.3%) artists, none of which appear in the MET's top 10, reflecting its focus on modern and contemporary global movements.
 
 ### Figure 1
-![Nationality Proportions by Museum](analysis_figures/nationality_proportions_by_museum.png)
+![Nationality Proportions by Museum](Snakemake_Workflow/analysis_figures/nationality_proportions_by_museum.png)
 
 
 Another key finding relates to the structure of representation itself. The analysis shows that representation is not simply about the number of artists from a given country but also about how frequently those artists appear within a collection. In the MET dataset, the same artist may be associated with multiple artworks, leading to a higher count of appearances compared to unique artist representation. This distinction is important because it highlights how institutional collecting practices can shape the interpretation of diversity. A museum may appear diverse when measured by total artwork counts, but less so when evaluated based on unique artists. MoMA’s dataset, which more clearly separates artists and artworks, provides a more balanced perspective in this regard.
@@ -273,10 +273,10 @@ Additionally, the use of artist birth years as a proxy for time reveals potentia
 Artist Birth-Year Trends (Figure 2 & 3) figures reveal how representation has shifted over time. At the MET, Italian artists dominate in earlier centuries (pre-1700), giving way to a huge rise in American artists from the 1800s onward, with notable spikes around the 1780s and 1860s birth decades. At MoMA, French artists peak sharply around the 1850s birth decade, which is consistent with the popularity of Impressionism and Post-Impressionism in modern art history, before American artists are more heavily represented from the 1880s onward, peaking around the 1920s–1930s birth decades. Both museums show a steep decline in records for artists born after 1950, which likely reflects acquisition lag and not actual artist count.
 
 ### Figure 2
-![Artist Birth-Year Trends - MET](analysis_figures/birth_year_trends_met.png)
+![Artist Birth-Year Trends - MET](Snakemake_Workflow/analysis_figures/birth_year_trends_met.png)
 
 ### Figure 3
-![Artist Birth-Year Trends - MoMA](analysis_figures/birth_year_trends_moma.png)
+![Artist Birth-Year Trends - MoMA](Snakemake_Workflow/analysis_figures/birth_year_trends_moma.png)
 
 Overall, the findings suggest that while both institutions have made some progress toward broader representation, their collections continue to reflect historical patterns of Western dominance. The differences between the MET and MoMA highlight how institutional focus, collection strategy, and historical context influence representation. These insights reinforce the idea that museums are not neutral spaces but active participants in constructing cultural narratives, with their collections shaping public understanding of art history and global artistic contributions.
 
