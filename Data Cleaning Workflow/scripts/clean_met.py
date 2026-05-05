@@ -107,3 +107,4 @@ def main():
 
     final.to_csv(output_path, index=False)
     print("\nSaved to:", output_path)
+main()
