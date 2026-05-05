@@ -342,8 +342,10 @@ This will automatically download the MoMA datasets from the official MoMA GitHub
 
 - [Metropolitan Museum of Art Open Access Dataset](https://github.com/metmuseum/openaccess)
 
-- [pandas Documentation](https://pandas.pydata.org)
+- [Pandas Documentation](https://pandas.pydata.org)
 
 - [OpenRefine](https://openrefine.org) 
 
-- [matplotlib Documentation](https://matplotlib.org)
+- [Matplotlib Documentation](https://matplotlib.org)
+
+- [Snakemake](https://snakemake.readthedocs.io)
