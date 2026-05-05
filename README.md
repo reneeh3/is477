@@ -319,7 +319,7 @@ Overall, these challenges highlight the complexity of working with real-world cu
    ```bash
    pip3 install -r requirements.txt
    ```
-3.  Run both cleaning workflows using Snakemake:
+3.  Navigate to `Data Cleaning Workflow` folder and run both cleaning workflows using Snakemake:
    ```bash
 snakemake --cores 1
    ```
