@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# =========================
 # LOAD DATA
 moma = pd.read_csv("final_moma.csv", low_memory=False)
 met = pd.read_csv("final_met.csv", low_memory=False)
@@ -14,9 +13,7 @@ print("\nMET columns:")
 print(met.columns.tolist())
 
 
-# =========================
 # STANDARDIZE AND COMBINE DATASETS
-# =========================
 columns = [
     "title",
     "artist_name",
@@ -41,8 +38,6 @@ print(combined["source"].value_counts())
 
 combined.to_csv("combined_moma_met.csv", index=False)
 
-
-# =========================
 # DATA QUALITY: MISSINGNESS
 print("\n=== MISSINGNESS SUMMARY ===")
 
@@ -55,8 +50,6 @@ missing = (
 
 print(missing)
 
-
-# =========================
 # VISUALIZATION 1:
 # NATIONALITY PROPORTIONS BY MUSEUM
 nationality_df = combined.dropna(subset=["nationality_clean"]).copy()
@@ -104,7 +97,6 @@ plt.tight_layout()
 plt.show()
 
 
-# =========================
 # VISUALIZATION 2:
 # REPRESENTATION OVER TIME
 time_df = combined.dropna(
@@ -165,7 +157,6 @@ for museum_name in trend_counts["source"].unique():
     plt.show()
 
 
-# =========================
 # GENERAL SUMMARY TABLES
 print("\n=== TOP PROPORTIONS OF NATIONALITIES BY MUSEUM ===")
 
