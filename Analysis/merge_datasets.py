@@ -188,4 +188,3 @@ top_overall = (
 )
 
 print(top_overall)
-)
