@@ -352,8 +352,14 @@ After execution, the following files are produced:
 
 - [Pandas Documentation](https://pandas.pydata.org)
 
-- [OpenRefine](https://openrefine.org) 
+- [OpenRefine Documentation](https://openrefine.org) 
 
 - [Matplotlib Documentation](https://matplotlib.org)
 
 - [Snakemake](https://snakemake.readthedocs.io)
+
+- [NumPy Documentation](https://numpy.org)
+
+- [Python Standard Library (re, os, json, hashlib)](https://docs.python.org/3/library/)
+
+- [Requests Library](https://docs.python-requests.org)
