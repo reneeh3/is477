@@ -120,6 +120,14 @@ The museum periodically updates both MoMA datasets. This project uses a snapshot
 - **Ethical/legal considerations:** This dataset reflects curatorial and institutional decisions regarding which artworks are collected and cataloged, and therefore does not represent a complete or unbiased sample of global art. Some fields contain missing or inconsistent data, which may affect analysis. Additionally, nationality labels are assigned by the museum and may not fully reflect artists’ identities. The dataset is released under an open-access policy for research and educational use.  
 - **Relevance to research questions:** This dataset provides both artwork-level and artist-level information needed to analyze geographic representation in the MET collection. By cleaning and standardizing key variables such as nationality and birth year, it enables direct comparison with the MoMA dataset to examine patterns of representation across institutions.
 
+### Overall Data Considerations
+
+The datasets used in this project are publicly available through museum open-access initiatives. The MoMA dataset is released under a CC0 public domain license, and the MET dataset is provided through the Metropolitan Museum of Art Open Access program. Both datasets permit unrestricted use for research and educational purposes.
+
+Despite their accessibility, the data reflects institutional curation and cataloging practices, which may introduce bias in terms of which artists and artworks are included. As a result, the datasets should not be interpreted as complete representations of global artistic production.
+
+From a structural perspective, both datasets required standardization to ensure comparability, including aligning variable names, cleaning categorical values, and handling missing or inconsistent entries. These preprocessing steps were necessary to produce a reliable and consistent dataset for analysis.
+
 ---
 
 ## Data Quality
