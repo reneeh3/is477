@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-figures_dir =os.path.join("analysis", "Analysis figures")
+base_dir = os.path.dirname(os.path.abspath(__file__))
+figures_dir = os.path.join(base_dir, "analysis_figures")
 os.makedirs(figures_dir, exist_ok=True)
 
 # LOAD DATA
