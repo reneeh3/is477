@@ -11,6 +11,7 @@
 ## Summary
 
 This project looks into the influence of the geographic origin of artists in major museums, specifically the Metropolitan Museum of Art (MET) and the Museum of Modern Art (MoMA). Museums are key in shaping and preserving cultural and social narratives by selecting which artworks to keep and preserve. This means representation is an important area to study.
+
 Our main research question is:
 * How does the geographic origin of artists influence their representation in major museums?
 
@@ -228,7 +229,7 @@ The unnecessary columns I removed included mostly physical measurement columns, 
 
 For the MET dataset, the data was initially cleaned and transformed using Python, followed by additional standardization in OpenRefine. Since the MET dataset stores both artwork and artist information in a single file, preprocessing was required to extract and standardize relevant variables. Key transformations included cleaning nationality values, extracting year fields, standardizing column names, and reducing the dataset to variables relevant to the research question. As a result, the final dataset differs from the original source and should be interpreted as a derived dataset.
 
-### Python Cleaning  
+#### Python Cleaning  
 For Python, I started by normalizing column names in the MET dataset. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores to ensure consistency across variables. Text fields were trimmed to remove leading and trailing whitespace, and relevant columns such as artist birth and death dates were processed to extract usable numeric values. Since many of the date fields in the MET dataset were stored as text, I created a function to extract the first valid four-digit year from each entry, allowing for standardized numerical analysis.
 
 I also created a function to clean and standardize nationality values. This function removed unnecessary formatting such as parentheses and extra characters, and used a mapping dictionary to group equivalent values together (e.g., “USA,” “US,” and “United States” were all standardized to “American”). This step was important because the MET dataset contained inconsistent and messy nationality entries that would otherwise distort the analysis.
@@ -237,15 +238,45 @@ Unlike the MoMA dataset, the MET dataset did not require merging separate artist
 
 Finally, I removed invalid rows with missing critical values such as artist name, birth year, or nationality, and removed duplicate rows to ensure that each record was unique and meaningful for analysis. This helped improve data quality and ensured consistency with the MoMA dataset structure.
 
-### OpenRefine Cleaning  
+#### OpenRefine Cleaning  
 After completing the initial cleaning in Python, I imported the MET dataset into OpenRefine for further standardization. OpenRefine was primarily used to inspect and correct inconsistencies in the nationality field, which remained one of the most complex variables. Using text faceting and clustering, I identified variations of the same nationality (e.g., “American|”, duplicate entries, or minor spelling inconsistencies) and standardized them into consistent values.
 
 I also used OpenRefine’s multi-valued cell functions to handle cases where nationality values contained multiple entries separated by delimiters. These values were split into separate entries and cleaned to remove duplicates and extra whitespace, ensuring that each nationality was clearly represented. Additional transformations included trimming whitespace, renaming columns for clarity, and removing any remaining unnecessary or redundant columns that were not relevant to the research question.
 
-Overall, OpenRefine complemented the Python cleaning process by enabling efficient manual inspection and correction of data inconsistencies that were difficult to fully automate. The final dataset produced from this combined workflow is more consistent, structured, and suitable for analyzing geographic representation in the MET collection.
+Overall, OpenRefine complemented the Python cleaning process by enabling efficient manual inspection and correction of data inconsistencies that were difficult to fully automate. To ensure transparency of manual cleaning steps, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`. This file documents the sequence of clustering, standardization, and column transformations applied during the cleaning process.
+
+### Data Integration
+
+After cleaning both datasets, we standardized them to a common schema consisting of the following variables: `title`, `artist_name`, `artist_birthyear`, `artist_deathyear`, and `nationality_clean`.
+
+We performed a vertical integration (concatenation) rather than a relational join because the MoMA and MET datasets represent independent museum collections rather than shared entities. A `source` variable was added to distinguish between records originating from each museum.
+
+This approach allows for direct comparison of geographic representation across institutions while preserving the structure of each dataset.
+
+To ensure transparency of manual cleaning steps, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`. This file documents the sequence of clustering, standardization, and column transformations applied during the cleaning process.
 
 ---
 
+## Compliance and Citation
+The MoMA dataset is released under a CC0 public domain license. The MET dataset is provided through the Metropolitan Museum of Art Open Access initiative. Both datasets are used in accordance with their respective licenses for research and educational purposes.
+
+Software used:
+- Python (pandas, NumPy, matplotlib)
+- OpenRefine
+- Snakemake
+
+  ---
+
+## Metadata (FAIR Principles)
+
+- Data format: CSV (UTF-8 encoded)
+- Snapshot date: April 2026
+- Variables standardized across datasets
+- Data is publicly accessible and reusable
+- Derived datasets are documented in this repository
+
+  ---
+  
 ## Findings
 The comparative analysis of the cleaned datasets from the Metropolitan Museum of Art and the Museum of Modern Art reveals clear and consistent patterns in how geographic origin influences artist representation. Across both institutions, artists from Western countries—particularly the United States and major European nations such as France, the United Kingdom, and Germany—dominate the collections. This concentration reflects longstanding historical dynamics in the global art world, where Western regions have had greater institutional power, market influence, and access to preservation resources. As a result, museum collections are not only repositories of art but also reflections of broader cultural and geopolitical hierarchies.
 
@@ -275,13 +306,12 @@ Finally, methodological improvements could further enhance reproducibility and s
 ---
 
 ## Challenges
-The process of cleaning, integrating, and analyzing the MET and MoMA datasets presented several significant challenges. One of the most prominent issues was the inconsistency in nationality data. The datasets contained a wide range of formatting irregularities, including duplicate values (e.g., “American|American”), trailing symbols (e.g., “American|”), variations in capitalization, and missing entries. These inconsistencies required extensive preprocessing, including string cleaning, standardization using mapping dictionaries, and clustering techniques in OpenRefine. Ensuring that all nationality values were consistent and comparable was essential for accurate analysis but required careful attention to detail and multiple iterations of cleaning.
 
-Another major challenge involved handling records with multiple artists or multiple nationalities. In both datasets, some artworks were associated with more than one artist, and in certain cases, artists were linked to multiple nationalities. This created ambiguity in how to represent these relationships in a structured dataset. To address this, the data had to be transformed into a one-to-many format by splitting and exploding rows, ensuring that each artwork-artist-nationality combination was represented separately. While this approach improved analytical clarity, it also increased the size and complexity of the dataset, making subsequent processing more resource-intensive.
+The process of cleaning, integrating, and analyzing the museum datasets presented several significant challenges. One of the primary issues was the inconsistency and messiness of key variables, particularly nationality, which appeared in many different formats with duplicate values, trailing symbols, inconsistent capitalization, and missing entries. Addressing these inconsistencies required extensive preprocessing using both Python and OpenRefine, including string cleaning, mapping standardization, and clustering techniques. Another challenge involved handling records associated with multiple artists or multiple nationalities, which introduced ambiguity in how relationships should be represented. To resolve this, the data was transformed into a one-to-many structure by splitting and expanding rows, ensuring that each artwork-artist-nationality combination could be analyzed independently, though this increased the size and complexity of the dataset.
 
-The size and structure of the MET dataset posed additional difficulties. Compared to the MoMA dataset, the MET data was significantly larger and less standardized, with artist and artwork information combined in a single file. This required additional steps to separate, clean, and restructure the data into a format comparable to MoMA’s two-table structure. Furthermore, the large file size created practical challenges for storage, processing, and uploading to platforms such as GitHub and OpenRefine. To manage this, it was necessary to reduce the dataset by selecting only relevant columns and filtering out incomplete or less useful records, balancing the need for efficiency with the preservation of meaningful information.
+In addition, differences in dataset structure and formatting created challenges for integration. The datasets were not originally designed to be used together, which required careful schema alignment, including standardizing column names, data types, and variable definitions. Significant effort was needed to ensure consistency across datasets so that comparisons could be made accurately. File size and computational constraints also posed practical challenges, particularly when working with large datasets in tools such as GitHub and OpenRefine. To manage this, the data had to be reduced by selecting only relevant variables and filtering incomplete records, balancing efficiency with the need to preserve meaningful information.
 
-Finally, aligning the two datasets for comparative analysis required careful schema matching and consistency checks. Differences in column names, data types, and overall structure meant that direct comparison was not initially possible. Significant effort was needed to standardize variable names, ensure consistent data types, and apply the same cleaning logic across both datasets. This process highlighted the importance of methodological consistency when working with multiple data sources and underscored the challenges of integrating datasets that were not originally designed to be used together.
+Overall, these challenges highlight the complexity of working with real-world cultural datasets, where inconsistencies, missing data, and structural differences require thoughtful preprocessing and methodological decisions. Addressing these issues was essential to ensure that the final dataset was reliable and suitable for analyzing geographic representation in museum collections.
 
 ---
 
