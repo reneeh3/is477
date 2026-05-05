@@ -190,7 +190,11 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
 
     - `Object ID`: primary identifier (no missing values)  
     - `Object Number`: accession number  
-    - `Title`: artwork title  
+    - `Title`: artwork title
+
+### Metadata and Accessibility
+
+The datasets used in this project follow FAIR principles. All data is stored in CSV format (UTF-8 encoded) and was accessed as a snapshot in April 2026. Variables were standardized across datasets to ensure interoperability. The datasets are publicly accessible and reusable, and all derived datasets and transformations are documented within this repository.
 
 ### Overall assessment:
 
@@ -256,26 +260,6 @@ This approach allows for direct comparison of geographic representation across i
 To ensure transparency of manual cleaning steps, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`. This file documents the sequence of clustering, standardization, and column transformations applied during the cleaning process.
 
 ---
-
-## Compliance and Citation
-The MoMA dataset is released under a CC0 public domain license. The MET dataset is provided through the Metropolitan Museum of Art Open Access initiative. Both datasets are used in accordance with their respective licenses for research and educational purposes.
-
-Software used:
-- Python (pandas, NumPy, matplotlib)
-- OpenRefine
-- Snakemake
-
-  ---
-
-## Metadata (FAIR Principles)
-
-- Data format: CSV (UTF-8 encoded)
-- Snapshot date: April 2026
-- Variables standardized across datasets
-- Data is publicly accessible and reusable
-- Derived datasets are documented in this repository
-
-  ---
   
 ## Findings
 The comparative analysis of the cleaned datasets from the Metropolitan Museum of Art and the Museum of Modern Art reveals clear and consistent patterns in how geographic origin influences artist representation. Across both institutions, artists from Western countries—particularly the United States and major European nations such as France, the United Kingdom, and Germany—dominate the collections. This concentration reflects longstanding historical dynamics in the global art world, where Western regions have had greater institutional power, market influence, and access to preservation resources. As a result, museum collections are not only repositories of art but also reflections of broader cultural and geopolitical hierarchies.
