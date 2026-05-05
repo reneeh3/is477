@@ -308,7 +308,6 @@ Overall, these challenges highlight the complexity of working with real-world cu
 ---
 
 ## Reproducing
-## Reproducing
 
 1. Clone the project repository and navigate into it:
    ```bash
