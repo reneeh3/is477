@@ -120,4 +120,4 @@ def main():
     print(df["nationality_clean"].value_counts().head(10))
     print(df[["objectid", "artist_constituentid", "nationality_clean", "gender_clean"]].isna().sum())
 
-df.to_csv(snakemake.output[0], index=False)
+    df.to_csv(snakemake.output[0], index=False)
