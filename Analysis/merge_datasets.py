@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
+figures_dir =os.path.join("analysis", "Analysis figures")
+os.makedirs(figures_dir, exist_ok=True)
 
 # LOAD DATA
 moma = pd.read_csv("final_moma.csv", low_memory=False)
@@ -94,6 +97,7 @@ plt.xlabel("Nationality")
 plt.ylabel("Proportion")
 plt.xticks(rotation=45, ha="right")
 plt.tight_layout()
+plt.savefig(os.path.join(figures_dir, "nationality_proportions_by_museum.png"))
 plt.show()
 
 
@@ -154,6 +158,7 @@ for museum_name in trend_counts["source"].unique():
     plt.xlabel("Artist Birth Decade")
     plt.ylabel("Number of Artwork Records")
     plt.tight_layout()
+    plt.savefig(os.path.join(figures_dir, f"birth_year_trends_{museum_name.lower()}.png"))
     plt.show()
 
 
