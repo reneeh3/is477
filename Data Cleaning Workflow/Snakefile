@@ -4,7 +4,6 @@ rule all:
         "Analysis/analysis_figures/birth_year_trends_met.png",
         "Analysis/analysis_figures/birth_year_trends_moma.png"
 
-
 rule download_moma:
     output:
         artists="data/moma_artists.csv",
@@ -19,7 +18,6 @@ rule download_met:
     script:
         "scripts/download_met.py"
 
-
 rule clean_moma:
     input:
         artists="data/moma_artists.csv",
@@ -29,7 +27,6 @@ rule clean_moma:
     script:
         "scripts/clean_moma.py"
 
-
 rule clean_met:
     input:
         "data/met_objects.csv"
@@ -37,7 +34,6 @@ rule clean_met:
         "results/met_snakefile_cleaned.csv"
     script:
         "scripts/clean_met.py"
-
 
 rule openrefine_moma:
     input:
@@ -48,7 +44,6 @@ rule openrefine_moma:
     script:
         "scripts/apply_openrefine.py"
 
-
 rule openrefine_met:
     input:
         data="results/met_snakefile_cleaned.csv",
@@ -58,7 +53,6 @@ rule openrefine_met:
     script:
         "scripts/apply_openrefine.py"
 
-
 rule combine:
     input:
         moma="results/final_moma.csv",
@@ -67,7 +61,6 @@ rule combine:
         "results/combined_moma_met.csv"
     script:
         "scripts/combine.py"
-
 
 rule analysis:
     input:
