@@ -121,3 +121,5 @@ def main():
     print(df[["objectid", "artist_constituentid", "nationality_clean", "gender_clean"]].isna().sum())
 
     df.to_csv(snakemake.output[0], index=False)
+
+main()
