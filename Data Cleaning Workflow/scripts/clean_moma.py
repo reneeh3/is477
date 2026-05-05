@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import re
 
-ARTISTS_URL = "https://media.githubusercontent.com/media/MuseumofModernArt/collection/43399bad2fad626a0750ab6801ced6f1e83b0a41/Artists.csv"
-ARTWORKS_URL = "https://media.githubusercontent.com/media/MuseumofModernArt/collection/a46be68e826552737fce8152b002dcd603c0a300/Artworks.csv"
+ARTISTS_FILE = "data/moma_artists.csv"
+ARTWORKS_FILE = "data/moma_artworks.csv"
 
 NATIONALITY_MAP = {
     "American": "American", "United States": "American", "USA": "American", "US": "American",
@@ -56,8 +56,8 @@ def parse_ids(val):
 
 
 def main():
-    artists = pd.read_csv(ARTISTS_URL)
-    artworks = pd.read_csv(ARTWORKS_URL, low_memory=False)
+    artists = pd.read_csv(ARTISTS_FILE)
+    artworks = pd.read_csv(ARTWORKS_FILE, low_memory=False)
 
     artists.columns = artists.columns.str.strip().str.lower().str.replace(" ", "_")
     artworks.columns = artworks.columns.str.strip().str.lower().str.replace(" ", "_")
