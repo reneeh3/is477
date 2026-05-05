@@ -28,7 +28,6 @@ We used publicly available datasets from both museums, cleaned and standardized 
 ---
 
 ## Data Profile
-*Max 2000 words*  
 
 ### Dataset 1: *MoMA: Artists.txt*
 - **Location in repository:** [MoMA:Artists.txt](https://github.com/reneeh3/is477/blob/main/MoMA%20datasets/Artists.txt.zip)
@@ -131,7 +130,7 @@ From a structural perspective, both datasets required standardization to ensure 
 ---
 
 ## Data Quality
-*(500–1000 words)*  
+
 To assess data quality, we examined completeness, consistency, and accuracy across key variables. A primary focus was on identifying missing values, as these directly impact our ability to analyze artist representation. For MoMA, there were many incomplete and inconsistent variables. Generally, the percentage for the important variables required for analysis was not very concerning, and the higher missingness variables are only apparent in less critical information such as size or web links to the works. For the MET dataset, data quality challenges were primarily related to inconsistencies in formatting, the presence of missing values in artist-related fields, and the structure of the dataset itself. 
 
 **MoMA Artists.txt:**
@@ -211,7 +210,6 @@ Overall, the MoMA and MET datasets are rich in information but require significa
 ---
 
 ## Data Cleaning
-*(Max 1000 words)*  
 
 The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine supported manual inspection and correction of inconsistencies. These cleaning and transformation decisions directly influence how representation is measured, particularly by ensuring that nationality counts reflect consistent and comparable values across datasets.
 
@@ -299,7 +297,6 @@ Overall, these challenges highlight the complexity of working with real-world cu
 
 ## Reproducing
 
-Provide a step-by-step guide to reproduce your results:
 
 1. Clone the project repository and navigate into it:
    ```bash
@@ -310,21 +307,17 @@ Provide a step-by-step guide to reproduce your results:
    ```bash
    pip3 install -r requirements.txt
    ```
-3.  Run the MoMA workflow using Snakemake:
+3.  Run both cleaning workflows using Snakemake:
    ```bash
 snakemake --cores 1
    ```
-This will automatically download the MoMA datasets from the official MoMA GitHub repository, run the cleaning script ( `clean_moma.py`), and generate a cleaned dataset  (`moma_snakefile_cleaned.csv`).
+This will automatically download the MoMA datasets from the official MoMA GitHub repository, run `clean_moma.py`, and `generate moma_snakefile_cleaned.csv`. It will also read the Met datasets from `data/artists.txt` and `data/artworks.txt`, run `clean_met.py`, and generate `met_snakefile_cleaned.csv`.
 
-4.  Open the cleaned dataset in OpenRefine.
-   - Load `moma_snakefile_cleaned.csv`
-   - Apply the saved history file:
-     - `apply_openrefine.json`
-5. Export the final cleaned MoMA dataset from OpenRefine as `final_moma.csv`.
-
-**6. COMPLETE THE MET CLEANING STEPS**
-
-7. Run analysis **(`INSERT THE ANALYSIS FILE NAME`)** to generate results.
+4.  Open each cleaned dataset in OpenRefine and apply the corresponding saved history file:
+- Load `moma_snakefile_cleaned.csv` and apply `apply_openrefine_to_moma.json`, then export as `final_moma.csv`
+- Load `met_snakefile_cleaned.csv` and apply `apply_openrefine_to_met.json`, then export as `final_met.csv`
+5. Run `analysis.py` to generate visualizations.
+  
 ---
 
 ## References
