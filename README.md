@@ -308,41 +308,54 @@ Overall, these challenges highlight the complexity of working with real-world cu
 ---
 
 ## Reproducing
+## Reproducing
+
 1. Clone the project repository and navigate into it:
    ```bash
    git clone <your-repository-link>
    cd is477
+   ```
 
 2. Install required dependencies:
-    ```bash
-    pip3 install -r requirements.txt
+   ```bash
+   pip3 install -r requirements.txt
+   ```
 
-4. Run the full workflow using Snakemake:
+3. Run the full workflow using Snakemake:
    ```bash
    snakemake -s "Data Cleaning Workflow/Snakefile" --cores 1
+   ```
 
-6. Workflow Overview
+4. **Workflow Overview**
 
-The pipeline executes the following steps automatically:
-- Downloads the MoMA Artists and Artworks datasets from the official MoMA GitHub repository
-- Downloads the MET dataset (MetObjects.csv) from the official MET Open Access repository
-- Cleans and standardizes both datasets using Python scripts
-- Applies OpenRefine transformation histories programmatically
-- Merges the cleaned datasets into a unified dataset
-- Runs analysis scripts and generates visualizations
+   The pipeline executes the following steps automatically:
 
-5. Final Outputs
+   - Downloads the MoMA Artists and Artworks datasets from the official MoMA GitHub repository  
+   - Downloads the MET dataset (`MetObjects.csv`) from the official MET Open Access repository  
+   - Cleans and standardizes both datasets using Python scripts  
+   - Applies OpenRefine transformation histories programmatically  
+   - Merges the cleaned datasets into a unified dataset  
+   - Runs analysis scripts and generates visualizations  
 
-After execution, the following files are produced:
-- results/moma_snakefile_cleaned.csv
-- results/met_snakefile_cleaned.csv
-- results/final_moma.csv
-- results/final_met.csv
-- results/combined_moma_met.csv
-- Analysis/analysis_figures/nationality_proportions_by_museum.png
-- Analysis/analysis_figures/birth_year_trends_met.png
-- Analysis/analysis_figures/birth_year_trends_moma.png
+5. **Final Outputs**
 
+   After execution, the following files are produced:
+
+   - `results/moma_snakefile_cleaned.csv`  
+   - `results/met_snakefile_cleaned.csv`  
+   - `results/final_moma.csv`  
+   - `results/final_met.csv`  
+   - `results/combined_moma_met.csv`  
+   - `Analysis/analysis_figures/nationality_proportions_by_museum.png`  
+   - `Analysis/analysis_figures/birth_year_trends_met.png`  
+   - `Analysis/analysis_figures/birth_year_trends_moma.png`  
+
+6. **Notes**
+
+   - The workflow is fully automated and does not require any pre-existing CSV files  
+   - All datasets are acquired programmatically during execution  
+   - No manual OpenRefine steps are required  
+   - The pipeline is designed to run in a clean environment  
 ---
 
 ## References
