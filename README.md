@@ -49,7 +49,7 @@ We used publicly available datasets from both museums, cleaned and standardized 
     -   `ULAN`:  Catalog for artists [artist](https://www.getty.edu/research/tools/vocabularies/ulan/index.html)
   - Primary identifier: `ConstituentID`
 - **Content & characteristics:** This is an artist-level dataset with demographic and biographical attributes like nationality, gender, birth years, and death years. Most variables are categorical and text fields, with `BeginDate` and `EndDate` as numeric year fields. There are 137 unique nationalities and 7 gender values (see later in data cleaning that most of these are syntactic errors). There are many missing values in `ArtistBio` (2,188 missing), `Nationality` (2,500 missing), `Gender` (3,282 missing), `Wiki QID` (12,611 missing), and `ULAN` (12,927 missing)
-- **Ethical/legal considerations:** While this is a large, public museum dataset, it still reflects institutional choices about which artists are documented. Missing demographic information can limit how we can interpret how fully artists are represented. Additionally, the fields may be reflective of what the museum labels the artists and not how the artists actually identify.
+- **Ethical/legal considerations:** This dataset reflects institutional curation decisions and may not represent all artists. Additionally, demographic attributes such as nationality and gender are assigned by the museum and may not fully reflect how individuals identify.
 - **Relevance to research questions:** The dataset provides the artists' nationalities and birthdate information needed to analyze geographic origin. It is generally more accurate and/or filled out than the Artwork dataset. It will let us study the background represented in MoMA and to compare it with the MET dataset.
 
 ### Dataset 2: *MoMA: Artworks.txt*
@@ -93,7 +93,7 @@ We used publicly available datasets from both museums, cleaned and standardized 
 
   - Primary identifier: `ObjectID`
 - **Content & characteristics:** This is an artwork-level dataset that is linked to the artists dataset through `ConstituentID`. It has very descriptive metadata and numerical measurement fields for physical art. The dataset has 8 unique departments and 42 unique classifications. While MoMA’s full collection contains nearly 200,000 works, this dataset includes only those that have been digitized/cataloged, so some artists, regions, or time periods may be underrepresented.
-- **Ethical/legal considerations:** Similarly to Artists.txt, it reflects the curators' and institutional decisions to catalog and preserve these pieces rather than a random sample of all artworks. The metadata quality varies a lot, with some having the majority of fields filled out and some having no documentation. Ethically, missing or inconsistent artist information may affect conclusions about representation, which may negatively or positively influence perception of the museum. The dataset is provided “as is” for research purposes. Some records are incomplete, inconsistent, or not curatorially verified, which may affect accuracy. Therefore, results derived from this dataset should be interpreted cautiously and not treated as definitive measures of representation.
+- **Ethical/legal considerations:** This dataset reflects institutional cataloging decisions and may not represent the full range of artworks. Metadata quality varies across records, and incomplete or inconsistent artist information may affect interpretations of representation.
 - **Relevance to research questions:** This dataset shows which artists are actually represented in MoMA through their artworks in the collection. Linking artists to the artworks, it helps measure how frequently each geographic origin appears. It also allows for analysis of representation across departments and classifications if interested.
 
 The museum periodically updates both MoMA datasets. This project uses a snapshot of the data accessed on April 1, 2026, and results may differ if the dataset is updated in the future. They are also both released under a CC0 public domain license, allowing unrestricted use. However, MoMA requests proper attribution, and any modifications to the dataset should be clearly indicated.
@@ -206,16 +206,14 @@ The datasets used in this project follow FAIR principles. All data is stored in 
 
 ### Overall assessment:
 
-Overall, the MoMA and MET datasets are rich in information but require significant preprocessing to be suitable for analysis. While missing values and inconsistencies are present in both datasets, most critical variables needed for the research question—such as artist name, nationality, and birth year—can be cleaned and standardized effectively. By filtering incomplete records, standardizing key fields, and reducing the datasets to relevant variables, we were able to produce high-quality derived datasets suitable for analyzing geographic representation.
-
-Despite these improvements, it is important to recognize that both datasets reflect institutional biases in collection and cataloging. As such, the results of the analysis should be interpreted as insights into museum representation rather than definitive measures of global artistic diversity.
+Overall, the MoMA and MET datasets are rich in information but require significant preprocessing to be suitable for analysis. While missing values and inconsistencies are present in both datasets, most critical variables needed for the research question—such as artist name, nationality, and birth year—can be cleaned and standardized effectively. By filtering incomplete records, standardizing key fields, and reducing the datasets to relevant variables, we were able to produce high-quality derived datasets suitable for analyzing geographic representation. These datasets reflect institutional collection practices, which should be considered when interpreting results.
 
 ---
 
 ## Data Cleaning
 *(Max 1000 words)*  
 
-The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine supported manual inspection and correction of inconsistencies.
+The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine supported manual inspection and correction of inconsistencies. These cleaning and transformation decisions directly influence how representation is measured, particularly by ensuring that nationality counts reflect consistent and comparable values across datasets.
 
 ### Python Cleaning
 
@@ -245,7 +243,7 @@ To ensure transparency, all OpenRefine transformations have been exported and in
 
 After cleaning both datasets, they were standardized to a common schema consisting of the following variables: `title`, `artist_name`, `artist_birthyear`, `artist_deathyear`, and `nationality_clean`.
 
-The MoMA dataset required merging of artist and artwork data, while the MET dataset did not require merging due to its single-table structure. Once both datasets were aligned to the same format, they were combined using vertical integration (row-wise concatenation). A new variable, `source`, was added to indicate whether each record originated from MoMA or MET. It is important to note that the integrated dataset reflects institutional collection practices rather than a complete representation of global artistic production.
+The MoMA dataset required merging of artist and artwork data, while the MET dataset did not require merging due to its single-table structure. Once both datasets were aligned to the same format, they were combined using vertical integration (row-wise concatenation). A new variable, `source`, was added to indicate whether each record originated from MoMA or MET. The integrated dataset reflects institutional collection practices, which may influence representation patterns.
 
 This integration strategy allows for direct comparison between the two museums while preserving the structure and meaning of each dataset.
 
