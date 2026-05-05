@@ -202,7 +202,7 @@ To assess data quality, we examined completeness, consistency, and accuracy acro
 
 ### Metadata and Accessibility
 
-The datasets used in this project follow FAIR principles. All data is stored in CSV format (UTF-8 encoded) and was accessed as a snapshot in April 2026. Variables were standardized across datasets to ensure interoperability. The datasets are publicly accessible and reusable, and all derived datasets and transformations are documented within this repository.
+The datasets used in this project follow FAIR principles. All data is stored in CSV format (UTF-8 encoded) and was accessed as a snapshot in April 2026. Variables were standardized across datasets to ensure interoperability. All datasets and derived outputs are stored with clear filenames and documented within the repository to support findability and reuse.
 
 ### Overall assessment:
 
@@ -215,57 +215,49 @@ Despite these improvements, it is important to recognize that both datasets refl
 ## Data Cleaning
 *(Max 1000 words)*  
 
-### MoMA Datasets
+The data cleaning process involved multiple stages of preprocessing, standardization, and integration to ensure that both the MoMA and MET datasets were consistent, comparable, and suitable for analysis. Cleaning was performed using a combination of Python and OpenRefine, where Python handled systematic transformations and OpenRefine supported manual inspection and correction of inconsistencies.
 
-For the MoMA Artists and Artworks dataset, the data was initially cleaned and merged through Python. Then, using OpenRefine, the data was manually standardized for consistency. Key transformations include standardizing nationality and gender fields, splitting multi-artist records, and creating new variables such as `nationality_clean`. As a result, the final dataset differs from the original source and should be interpreted as a derived dataset. 
+### Python Cleaning
 
-#### Python Cleaning
+Initial data cleaning was conducted in Python for both datasets. While similar cleaning strategies were applied, the structure of the MoMA and MET datasets required different approaches.
 
-For Python, I started by normalizing column names in  `Artists.txt` and `Artworks.txt`. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores, which addresses consistency issues. The text fields were trimmed, and numerical columns like `constituentid`, `begindate`, and `enddate` were converted to numeric values. Fields with `0` values in date columns were replaced with missing values because `0` was being used as a placeholder rather than a real year. This addressed accuracy and missing-value issues.
+For the MoMA data, two separate datasets (`Artists.txt` and `Artworks.txt`) were cleaned independently before being merged. Column names were standardized by converting them to lowercase and replacing spaces with underscores. Text fields were trimmed, and numeric fields such as `constituentid`, `begindate`, and `enddate` were converted to numeric types, with placeholder values such as `0` replaced with missing values. Custom functions were created to standardize nationality and gender values by removing unnecessary formatting and mapping equivalent values (e.g., “USA,” “US,” and “United States”) to a single standardized form.
 
-I also created functions that standardize nationality, gender, and dates. The nationality function removed extra parentheses and formatting, and used a mapping dictionary to combine the same values that were written differently, such as `USA` or `US.` I did the same with gender, in case that was something extra we wanted to analyze. For the year function, it pulled the first valid four-digit year from the strings to standardize strings like `c. 1950` or `1945-46`.
+A key difference in the MoMA dataset was the presence of multiple artists associated with a single artwork. To address this, the `constituentid` field was parsed and the dataset was exploded so that each artwork-artist pair was represented as a separate row. This ensured that each record contained only one artist and prevented multiple nationalities from being stored in a single cell. After cleaning, the artist dataset was merged with the artwork dataset using `constituentid`, and artist-level demographic variables were prioritized when duplicates existed.
 
-For the artworks dataset, I cleaned text columns, converted `objectid` into a numeric field, and standardized nationality and gender the same way. A common issue in the MoMA data was that some artworks had multiple artists listed in one row. So, I parsed the `constituentid` field into a list of artist IDs and exploded the dataset so that each artwork-artist pair received its own row, enabling easier merging and preventing multiple nationalities from being trapped inside one cell.
+In contrast, the MET dataset consisted of a single table (`MetObjects.csv`) that already contained both artist and artwork information. As a result, no merging was required. However, the dataset required additional preprocessing due to inconsistent formatting and larger size. Column names were standardized in the same way as MoMA, and text fields were cleaned. Date fields were often stored as text, so a function was implemented to extract valid four-digit years for consistent numerical analysis. Nationality values were also standardized using mapping functions to address inconsistencies similar to those found in the MoMA dataset.
 
-After that, I created an artist lookup table from the cleaned artist dataset and merged it with the cleaned artworks dataset using `constituentid`. When both artwork-level and artist-level nationality or gender values existed, I prioritized the artist-level fields because they came directly from the artist profile dataset, and that dataset was also more high quality. I then created `nationality_clean` and `gender_clean` fields using those preferred values.
+Since the MET dataset contained many variables not relevant to the research question, it was reduced to a subset of key variables (title, artist name, birth year, death year, and nationality). This ensured consistency with the MoMA dataset structure while improving efficiency and reducing noise in the analysis.
 
-Finally, I removed invalid rows missing both `objectid` and `accessionnumber`, removed duplicate rows, and removed duplicate artwork-artist combinations, addressing uniqueness issues and preventing the same artwork-artist relationship from being counted more than once.
+For both datasets, duplicate records and invalid rows (e.g., missing critical values such as artist name or nationality) were removed to improve overall data quality and ensure that each observation was meaningful.
 
-#### OpenRefine Cleaning
+### OpenRefine Cleaning
 
-I imported the post-Python cleaned MoMA dataset into OpenRefine for additional cleaning. I mainly used it to inspect facets and mass-edit inconsistent nationality values that would be difficult to fix through Python. Most corrections were ones of repeated parentheses, multi-artist nationality strings, spelling errors such as `Russiam`, and inconsistent versions of the same nationality. I also removed irrelevant columns to our question, cleaned up the column names, and trimmed whitespace.
+After Python preprocessing, both datasets were imported into OpenRefine for additional standardization. OpenRefine was primarily used to inspect and correct inconsistencies in the nationality field, which remained one of the most complex variables.
 
-The unnecessary columns I removed included mostly physical measurement columns, image/link fields, and old/unclean nationality columns to reduce clutter and keep the final dataset focused on the variables for geographic representation. For multi-nationality values, I used OpenRefine’s multi-valued cell split function to separate values by commas, then trimmed whitespace. This made the nationality field more consistent.
+Using text faceting and clustering, variations of the same nationality were identified and standardized (e.g., duplicate values, trailing symbols, and spelling inconsistencies). Multi-valued nationality fields were split into separate entries using OpenRefine’s multi-valued cell functions, and whitespace was trimmed to ensure consistency.
 
-### Met Dataset
+Additional transformations included renaming columns for clarity and removing unnecessary variables such as measurement fields, URLs, and other metadata that were not relevant to the research question. OpenRefine complemented the Python cleaning process by enabling efficient manual corrections that were difficult to fully automate.
 
-For the MET dataset, the data was initially cleaned and transformed using Python, followed by additional standardization in OpenRefine. Since the MET dataset stores both artwork and artist information in a single file, preprocessing was required to extract and standardize relevant variables. Key transformations included cleaning nationality values, extracting year fields, standardizing column names, and reducing the dataset to variables relevant to the research question. As a result, the final dataset differs from the original source and should be interpreted as a derived dataset.
-
-#### Python Cleaning  
-For Python, I started by normalizing column names in the MET dataset. I stripped extra spaces, converted all column names to lowercase, and replaced spaces with underscores to ensure consistency across variables. Text fields were trimmed to remove leading and trailing whitespace, and relevant columns such as artist birth and death dates were processed to extract usable numeric values. Since many of the date fields in the MET dataset were stored as text, I created a function to extract the first valid four-digit year from each entry, allowing for standardized numerical analysis.
-
-I also created a function to clean and standardize nationality values. This function removed unnecessary formatting such as parentheses and extra characters, and used a mapping dictionary to group equivalent values together (e.g., “USA,” “US,” and “United States” were all standardized to “American”). This step was important because the MET dataset contained inconsistent and messy nationality entries that would otherwise distort the analysis.
-
-Unlike the MoMA dataset, the MET dataset did not require merging separate artist and artwork tables, since both types of information were already combined. However, this also meant that artist information was repeated across multiple artwork records. To address this, I focused on selecting only the relevant columns for the analysis and reducing the dataset size by filtering out unnecessary variables. I then created a final dataset that included only key variables such as title, artist name, artist birth year, artist death year, and cleaned nationality.
-
-Finally, I removed invalid rows with missing critical values such as artist name, birth year, or nationality, and removed duplicate rows to ensure that each record was unique and meaningful for analysis. This helped improve data quality and ensured consistency with the MoMA dataset structure.
-
-#### OpenRefine Cleaning  
-After completing the initial cleaning in Python, I imported the MET dataset into OpenRefine for further standardization. OpenRefine was primarily used to inspect and correct inconsistencies in the nationality field, which remained one of the most complex variables. Using text faceting and clustering, I identified variations of the same nationality (e.g., “American|”, duplicate entries, or minor spelling inconsistencies) and standardized them into consistent values.
-
-I also used OpenRefine’s multi-valued cell functions to handle cases where nationality values contained multiple entries separated by delimiters. These values were split into separate entries and cleaned to remove duplicates and extra whitespace, ensuring that each nationality was clearly represented. Additional transformations included trimming whitespace, renaming columns for clarity, and removing any remaining unnecessary or redundant columns that were not relevant to the research question.
-
-Overall, OpenRefine complemented the Python cleaning process by enabling efficient manual inspection and correction of data inconsistencies that were difficult to fully automate. To ensure transparency of manual cleaning steps, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`. This file documents the sequence of clustering, standardization, and column transformations applied during the cleaning process.
+To ensure transparency, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`.
 
 ### Data Integration
 
-After cleaning both datasets, we standardized them to a common schema consisting of the following variables: `title`, `artist_name`, `artist_birthyear`, `artist_deathyear`, and `nationality_clean`.
+After cleaning both datasets, they were standardized to a common schema consisting of the following variables: `title`, `artist_name`, `artist_birthyear`, `artist_deathyear`, and `nationality_clean`.
 
-We performed a vertical integration (concatenation) rather than a relational join because the MoMA and MET datasets represent independent museum collections rather than shared entities. A `source` variable was added to distinguish between records originating from each museum.
+The MoMA dataset required merging of artist and artwork data, while the MET dataset did not require merging due to its single-table structure. Once both datasets were aligned to the same format, they were combined using vertical integration (row-wise concatenation). A new variable, `source`, was added to indicate whether each record originated from MoMA or MET.
 
-This approach allows for direct comparison of geographic representation across institutions while preserving the structure of each dataset.
+This integration strategy allows for direct comparison between the two museums while preserving the structure and meaning of each dataset.
 
-To ensure transparency of manual cleaning steps, all OpenRefine transformations have been exported and included in the repository as `apply_openrefine.json`. This file documents the sequence of clustering, standardization, and column transformations applied during the cleaning process.
+### Overall Workflow
+
+The overall workflow followed a structured pipeline:
+
+1. Load raw datasets
+2. Clean and standardize variables using Python
+3. Apply manual corrections using OpenRefine
+4. Integrate datasets into a unified schema
+5. Perform analysis and visualization
 
 ---
   
