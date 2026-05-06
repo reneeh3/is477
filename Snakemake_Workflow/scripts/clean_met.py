@@ -23,7 +23,7 @@ NATIONALITY_MAP = {
 def clean_nationality(val):
     if pd.isna(val):
         return np.nan
-    val = str(val).strip().strip("()").split(",")[0].strip()
+    val = str(val).strip().strip("()").split("|")[0].split(",")[0].strip()
     if val in ("", "nan", "None", "None|", "|"):
         return np.nan
     return NATIONALITY_MAP.get(val, val)
