@@ -312,24 +312,30 @@ In addition, differences in dataset structure and formatting created challenges 
 Overall, these challenges highlight the complexity of working with real-world cultural datasets, where inconsistencies, missing data, and structural differences require thoughtful preprocessing and methodological decisions. Addressing these issues was essential to ensure that the final dataset was reliable and suitable for analyzing geographic representation in museum collections.
 
 ---
-
 ## Reproducing
 
-## Reproducing
-1. Clone the project repository and navigate into the `Snakemake_Workflow` folder:
+1. Clone the project repository and navigate into it:
 ```bash
-   git clone 
-   cd is477/Snakemake_Workflow
+git clone https://github.com/reneeh3/is477.git
+cd is477
 ```
 
 2. Install required dependencies:
+
 ```bash
-   pip3 install -r requirements.txt
+pip3 install -r Snakemake_Workflow/requirements.txt
 ```
 
-3. Run the full workflow using Snakemake:
+3. Navigate to the workflow directory:
+
 ```bash
-   python3 -m snakemake --cores 1
+cd Snakemake_Workflow
+```
+
+4. Run the full workflow using Snakemake:
+
+```bash
+python3 -m snakemake --cores 1
 ```
 
 4. **Workflow Overview**
