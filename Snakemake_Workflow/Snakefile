@@ -1,8 +1,8 @@
 rule all:
     input:
-        "Analysis/analysis_figures/nationality_proportions_by_museum.png",
-        "Analysis/analysis_figures/birth_year_trends_met.png",
-        "Analysis/analysis_figures/birth_year_trends_moma.png"
+        "analysis_figures/nationality_proportions_by_museum.png",
+        "analysis_figures/birth_year_trends_met.png",
+        "analysis_figures/birth_year_trends_moma.png"
 
 rule download_moma:
     output:
@@ -66,8 +66,8 @@ rule analysis:
     input:
         "results/combined_moma_met.csv"
     output:
-        "Analysis/analysis_figures/nationality_proportions_by_museum.png",
-        "Analysis/analysis_figures/birth_year_trends_met.png",
-        "Analysis/analysis_figures/birth_year_trends_moma.png"
+        "analysis_figures/nationality_proportions_by_museum.png",
+        "analysis_figures/birth_year_trends_met.png",
+        "analysis_figures/birth_year_trends_moma.png"
     script:
-        "Analysis/analysis.py"
+        "scripts/analysis.py"
